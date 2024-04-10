@@ -1,0 +1,45 @@
+.grid-container3 {
+    display: grid;
+    grid-template-columns: .333fr .333fr .333fr;
+    grid-template-rows: .333fr .333fr .333fr;
+    height: 90%;
+}
+
+/* Add this CSS for smaller screens */
+@media screen and (max-width: 750px) {
+
+    .grid-container,
+    .grid-container2,
+    .grid-container3 {
+      display: block;
+      /* Change display to block for smaller screens */
+    }
+  
+    .grid-item,
+    .sub-grid-item,
+    .subsub-grid-item {
+      width: auto;
+      /* Set width to auto to allow items to take full width */
+    }
+  
+    .grid-item-box {
+      display: block;
+      /* Change display to block for smaller screens */
+    }
+  
+    .sub-grid-item2.split {
+      display: block;
+      /* Change display to block for smaller screens */
+    }
+  
+    #navHome,
+    #navAbout-me,
+    #navPortfolio {
+      display: none;
+      /* Hide the navigation menu on smaller screens */
+    }
+  
+    .textBox {
+      padding-top: 100px;
+    }
+  }

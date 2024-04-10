@@ -5,7 +5,6 @@ header {
   background-color: black;
   color: #fff;
 }
-
 .header-box {
   display: flex;
   justify-content: space-between;
@@ -92,6 +91,7 @@ html {
 
 .itemTitle {
   font-size: 24px;
+  margin-bottom: 20px;
   font-weight: bold;
   color: black;
 }
@@ -111,29 +111,17 @@ html {
   /* Margin from the left */
 }
 
-#latest-work {
-  display: flex;
-  align-items: flex-end;
-}
-
-#portfolio {
-  display: flex;
-  align-items: flex-end;
-}
-
-#about-me {
-  display: flex;
-  align-items: flex-end;
-}
-
-#contact {
+.lower-textbox {
   display: flex;
   align-items: flex-end;
 }
 
 /* Add this CSS for smaller screens */
 @media screen and (max-width: 750px) {
-  .grid-container,.grid-container2 {
+
+  .grid-container,
+  .grid-container2,
+  .grid-container3 {
     display: block;
     /* Change display to block for smaller screens */
   }
