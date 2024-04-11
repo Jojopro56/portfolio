@@ -1,4 +1,4 @@
-.grid-container3 {
+.grid-container4 {
     display: grid;
     grid-template-columns: .333fr .333fr .333fr;
     grid-template-rows: .333fr .333fr .333fr;
@@ -10,7 +10,7 @@
 
     .grid-container,
     .grid-container2,
-    .grid-container3 {
+    .grid-container4 {
       display: block;
       /* Change display to block for smaller screens */
     }
