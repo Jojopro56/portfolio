@@ -1,0 +1,38 @@
+#photography {
+    background-image: url('/afb/viva-thumb.png');
+    background-color: rgba(255, 255, 255, .75);
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+    transition: all .3s;
+}
+
+#photography:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#videography {
+    background-image: url('/afb/blikveld-thumb.png');
+    background-color: rgba(255, 255, 255, .75);
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+    transition: all .3s;
+}
+
+#videography:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#otherPortfolio {
+    background-image: url('/afb/placeholder.png');
+    background-color: rgba(255, 255, 255, .5);
+    background-blend-mode: lighten;
+    background-size: cover;
+    background-position: center;
+    transition: all .3s;
+}
+
+#otherPortfolio:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}

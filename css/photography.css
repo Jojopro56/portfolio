@@ -54,6 +54,8 @@
     border-radius: 5px;
     text-decoration: none; 
     display: inline-block; 
+    position: absolute;
+    z-index: 2;
     margin-bottom: 40px; 
     margin-top: 20px;
     margin-left: 20px
@@ -61,4 +63,56 @@
 
 .back-button:hover {
     background-color: #333;
+}
+
+#classic {
+  background-image: url('/afb/classic-thumb.jpg');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#classic:hover {
+  background-color: rgba(255,255,255,.75);
+}
+
+#vintage {
+  background-image: url('/afb/vintage-thumb.jpg');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#vintage:hover {
+  background-color: rgba(255,255,255,.75);
+}
+
+#viva {
+  background-image: url('/afb/viva-thumb.png');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#viva:hover {
+  background-color: rgba(255,255,255,.75);
+}
+
+#all {
+  background-image: url('/afb/all-thumb.jpg');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#all:hover {
+  background-color: rgba(255,255,255,.75);
 }

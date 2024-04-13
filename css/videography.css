@@ -54,6 +54,8 @@
     border-radius: 5px;
     text-decoration: none; 
     display: inline-block; 
+    position: absolute;
+    z-index: 2;
     margin-bottom: 40px; 
     margin-top: 20px;
     margin-left: 20px
@@ -61,4 +63,43 @@
 
 .back-button:hover {
     background-color: #333;
+}
+
+#blikveld {
+  background-image: url('/afb/blikveld-thumb.png');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#blikveld:hover {
+  background-color: rgba(255,255,255,.75);
+}
+
+#jubileum-fpf {
+  background-image: url('/afb/fpfjub-thumb.jpg');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#jubileum-fpf:hover {
+  background-color: rgba(255,255,255,.75);
+}
+
+#stereo {
+  background-image: url('/afb/stereo-thumb.png');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#stereo:hover {
+  background-color: rgba(255,255,255,.75);
 }

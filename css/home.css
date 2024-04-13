@@ -5,6 +5,7 @@ header {
   background-color: black;
   color: #fff;
 }
+
 .header-box {
   display: flex;
   justify-content: space-between;
@@ -111,9 +112,65 @@ html {
   /* Margin from the left */
 }
 
+.kop2 {
+  margin-top: 100px;
+  text-align: center;
+}
+
 .lower-textbox {
   display: flex;
   align-items: flex-end;
+}
+
+#latest-work {
+  background-image: url('/afb/blikveld-thumb.png');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#latest-work:hover {
+  background-color: rgba(255,255,255,0.75);
+}
+
+#about-me {
+  background-image: url('/afb/placeholder.png');
+  background-color: rgba(255,255,255,.5);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#about-me:hover {
+  background-color: rgba(255,255,255,.4);
+}
+
+#contact {
+  background-image: url('/afb/placeholder.png');
+  background-color: rgba(255,255,255,.5);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#contact:hover {
+  background-color: rgba(255,255,255,.4);
+}
+
+.version {
+  font-family: "Inter", sans-serif;
+  position: fixed;
+  bottom: 10px; /* Adjust as needed to control the distance from the bottom */
+  right: 10px; /* Adjust as needed to control the distance from the right */
+  background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
+  color: white; /* Text color */
+  padding: 5px 10px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 14px; /* Font size */
 }
 
 /* Add this CSS for smaller screens */

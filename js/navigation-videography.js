@@ -1,19 +1,14 @@
-document.getElementById("viva").addEventListener("click", function(event) {
+document.getElementById("blikveld").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent default link behavior
-    window.location.href = "viva.html"; // Navigate to portfolio.html
+    window.location.href = "blikveld.html"; // Navigate to portfolio.html
 });
 
-document.getElementById("vintage").addEventListener("click", function(event) {
+document.getElementById("jubileum-fpf").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent default link behavior
-    window.location.href = "vintage.html"; // Navigate to portfolio.html
+    window.location.href = "jubileumfpf.html"; // Navigate to portfolio.html
 });
 
-document.getElementById("classic").addEventListener("click", function(event) {
+document.getElementById("stereo").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent default link behavior
-    window.location.href = "classic.html"; // Navigate to portfolio.html
-});
-
-document.getElementById("all").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default link behavior
-    window.location.href = "all.html"; // Navigate to portfolio.html
+    window.location.href = "stereo.html"; // Navigate to portfolio.html
 });
