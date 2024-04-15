@@ -12,6 +12,7 @@
     .grid-container2,
     .grid-container4 {
       display: block;
+      height: auto;
       /* Change display to block for smaller screens */
     }
   
