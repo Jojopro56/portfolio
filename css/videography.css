@@ -1,4 +1,4 @@
-.grid-container3 {
+.grid-container4 {
     display: grid;
     grid-template-columns: .333fr .333fr .333fr;
     grid-template-rows: .333fr .333fr .333fr;
@@ -10,7 +10,7 @@
 
     .grid-container,
     .grid-container2,
-    .grid-container3 {
+    .grid-container4 {
       display: block;
       height: auto;
       /* Change display to block for smaller screens */
@@ -66,8 +66,8 @@
     background-color: #333;
 }
 
-#classic {
-  background-image: url('/afb/classic-thumb.jpg');
+#blikveld {
+  background-image: url('/afb/blikveld-thumb.png');
   background-color: rgba(255,255,255,.9);
   background-blend-mode: lighten;
   background-size: cover;
@@ -75,12 +75,12 @@
   transition: all .3s;
 }
 
-#classic:hover {
+#blikveld:hover {
   background-color: rgba(255,255,255,.75);
 }
 
-#vintage {
-  background-image: url('/afb/vintage-thumb.jpg');
+#jubileum-fpf {
+  background-image: url('/afb/fpfjub-thumb.jpg');
   background-color: rgba(255,255,255,.9);
   background-blend-mode: lighten;
   background-size: cover;
@@ -88,12 +88,12 @@
   transition: all .3s;
 }
 
-#vintage:hover {
+#jubileum-fpf:hover {
   background-color: rgba(255,255,255,.75);
 }
 
-#viva {
-  background-image: url('/afb/viva-thumb.png');
+#stereo {
+  background-image: url('/afb/stereo-thumb.png');
   background-color: rgba(255,255,255,.9);
   background-blend-mode: lighten;
   background-size: cover;
@@ -101,19 +101,6 @@
   transition: all .3s;
 }
 
-#viva:hover {
-  background-color: rgba(255,255,255,.75);
-}
-
-#all {
-  background-image: url('/afb/all-thumb.jpg');
-  background-color: rgba(255,255,255,.9);
-  background-blend-mode: lighten;
-  background-size: cover;
-  background-position: center;
-  transition: all .3s;
-}
-
-#all:hover {
+#stereo:hover {
   background-color: rgba(255,255,255,.75);
 }
