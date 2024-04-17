@@ -113,8 +113,16 @@ html {
 }
 
 .kop2 {
-  margin-top: 100px;
-  text-align: center;
+  margin-top: 60px;
+  text-align: left;
+}
+
+blockquote p {
+  font-size: 32px;
+}
+
+blockquote h2 {
+  font-weight: 900;
 }
 
 .lower-textbox {
