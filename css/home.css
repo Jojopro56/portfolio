@@ -169,6 +169,45 @@ blockquote h2 {
   background-color: rgba(255,255,255,.4);
 }
 
+#aboutJoey {
+  background-image: url('/afb/placeholder.png');
+  background-color: rgba(255,255,255,.5);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#aboutJoey:hover {
+  background-color: rgba(255,255,255,.4);
+}
+
+#education {
+  background-image: url('/afb/placeholder.png');
+  background-color: rgba(255,255,255,.5);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#education:hover {
+  background-color: rgba(255,255,255,.4);
+}
+
+#work {
+  background-image: url('/afb/placeholder.png');
+  background-color: rgba(255,255,255,.5);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#work:hover {
+  background-color: rgba(255,255,255,.4);
+}
+
 #contact {
   background-image: url('/afb/placeholder.png');
   background-color: rgba(255,255,255,.5);
