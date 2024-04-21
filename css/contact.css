@@ -131,3 +131,24 @@ blockquote {
     filter: grayscale(100%);
 }
 
+.back-button {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; 
+    display: inline-block; 
+    position: absolute;
+    z-index: 2;
+    margin-bottom: 40px; 
+    margin-top: 20px;
+    margin-left: 20px
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+

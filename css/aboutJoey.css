@@ -1,0 +1,126 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: black;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-container {
+    max-width: 100%;
+    margin-top: 60px;
+    height: 400px; /* Set a fixed height for the image container */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.img-container img {
+    height: 100%;
+    object-fit: cov er; /* Scale the image to cover the entire container while preserving its aspect ratio */
+}
+
+
+
+article {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.column {
+    flex: 0 0 45%;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: black;
+    line-height: 1.6;
+}
+
+
+
+.centerBtn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.black-button:hover {
+    background-color: #333;
+}
+
+.back-button {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; 
+    display: inline-block; 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    margin-left: 20px
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+blockquote {
+    text-align: left;
+}
+
+.disclaimer {
+    background-color: red;
+    font-weight: 900;
+}
+
+.marginBtm {
+    margin-bottom: 120px;
+}
+
+#bw {
+    filter: grayscale(100%);
+}
+
