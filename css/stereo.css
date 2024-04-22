@@ -5,13 +5,13 @@
 }
 
 .title {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
 }
 
 h1 {
     font-family: "Inter", sans-serif;
-    font-size: 24px;
+    font-size: 48px;
     margin-bottom: 20px;
     font-weight: bold;
     color: black;
@@ -35,6 +35,7 @@ img {
 
 .img-container {
     max-width: 100%;
+    margin-top: 60px;
     height: 400px; /* Set a fixed height for the image container */
     overflow: hidden; /* Hide any overflow */
 }
@@ -105,8 +106,10 @@ p {
 }
 
 blockquote {
-    text-align: center;
+    text-align: left;
 }
+
+
 
 .disclaimer {
     background-color: red;
@@ -115,15 +118,6 @@ blockquote {
 
 #bw {
     filter: grayscale(100%);
-}
-
-.iframe-container {
-    margin-top: 100px;
-    text-align: center; /* Center-align the content horizontally */
-}
-.iframe-container iframe {
-    display: inline-block; /* Make the iframe behave like an inline-block element */
-    vertical-align: middle; /* Vertically align the iframe in the middle */
 }
 
 a {

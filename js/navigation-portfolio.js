@@ -7,3 +7,8 @@ document.getElementById("videography").addEventListener("click", function(event)
     event.preventDefault(); // Prevent default link behavior
     window.location.href = "videography.html"; // Navigate to portfolio.html
 });
+
+document.getElementById("otherPortfolio").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    window.location.href = "other.html"; // Navigate to portfolio.html
+});

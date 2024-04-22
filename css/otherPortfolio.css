@@ -1,0 +1,106 @@
+.grid-container4 {
+    display: grid;
+    grid-template-columns: .333fr .333fr .333fr;
+    grid-template-rows: .333fr .333fr .333fr;
+    height: 90%;
+}
+
+/* Add this CSS for smaller screens */
+@media screen and (max-width: 750px) {
+
+    .grid-container,
+    .grid-container2,
+    .grid-container4 {
+      display: block;
+      height: auto;
+      /* Change display to block for smaller screens */
+    }
+  
+    .grid-item,
+    .sub-grid-item,
+    .subsub-grid-item {
+      width: auto;
+      /* Set width to auto to allow items to take full width */
+    }
+  
+    .grid-item-box {
+      display: block;
+      /* Change display to block for smaller screens */
+    }
+  
+    .sub-grid-item2.split {
+      display: block;
+      /* Change display to block for smaller screens */
+    }
+  
+    #navHome,
+    #navAbout-me,
+    #navPortfolio {
+      display: none;
+      /* Hide the navigation menu on smaller screens */
+    }
+  
+    .textBox {
+      padding-top: 100px;
+    }
+  }
+
+  .back-button {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; 
+    display: inline-block; 
+    position: absolute;
+    z-index: 2;
+    margin-bottom: 40px; 
+    margin-top: 20px;
+    margin-left: 20px
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+#blikveld {
+  background-image: url('/afb/placeholder.png');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#blikveld:hover {
+  background-color: rgba(255,255,255,.75);
+}
+
+#jubileum-fpf {
+  background-image: url('/afb/placeholder.png');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#jubileum-fpf:hover {
+  background-color: rgba(255,255,255,.75);
+}
+
+#stereo {
+  background-image: url('/afb/placeholder.png');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#stereo:hover {
+  background-color: rgba(255,255,255,.75);
+}
