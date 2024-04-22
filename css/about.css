@@ -63,3 +63,64 @@
 .back-button:hover {
     background-color: #333;
 }
+
+@media screen and (max-width: 750px) {
+
+    #photography,
+    #videography {
+      width: 100%;
+      /* Set the width to 100% to take the full width of the container */
+      height: 400px;
+      /* Adjust the height to your desired value */
+    }
+  
+  
+    .grid-container,
+    .grid-container2,
+    .grid-container3 {
+      display: block;
+      height: auto;
+      /* Change display to block for smaller screens */
+    }
+  
+    .grid-item,
+    .sub-grid-item,
+    .subsub-grid-item {
+      width: auto;
+      /* Set width to auto to allow items to take full width */
+    }
+  
+    .grid-item-box {
+      display: block;
+      /* Change display to block for smaller screens */
+    }
+  
+    .sub-grid-item2.split {
+      display: block;
+      /* Change display to block for smaller screens */
+    }
+  
+    #navHome,
+    #navAbout-me,
+    #navPortfolio {
+      display: none;
+      /* Hide the navigation menu on smaller screens */
+    }
+  
+    .textBox {
+      padding-top: 100px;
+    }
+  
+    .itemTitle {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: black;
+    }
+  
+    .itemDesc {
+      font-size: 16px;
+      font-weight: 300;
+      color: black;
+    }
+  }
