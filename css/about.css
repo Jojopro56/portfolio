@@ -1,3 +1,9 @@
+.grid-container3 {
+    display: grid;
+    grid-template-columns: .333fr .333fr .333fr;
+    height: 90%;
+}
+
 #aboutJoey {
     background-image: url('/afb/orange-bg-joey.jpg');
     background-color: rgba(255, 255, 255, .8);
