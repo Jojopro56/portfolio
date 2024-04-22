@@ -17,3 +17,8 @@ document.getElementById("meldkamer").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent default link behavior
     window.location.href = "meldkamer.html"; // Navigate to portfolio.html
 });
+
+document.getElementById("vestingVideo").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    window.location.href = "vesting.html"; // Navigate to portfolio.html
+});

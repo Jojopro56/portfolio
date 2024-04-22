@@ -104,3 +104,29 @@
 #stereo:hover {
   background-color: rgba(255,255,255,.75);
 }
+
+#meldkamer {
+  background-image: url('/afb/noodgeval-logo.png');
+  background-color: rgba(255,255,255,.7);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#meldkamer:hover {
+  background-color: rgba(255,255,255,.75);
+}
+
+#vestingVideo {
+  background-image: url('/afb/kathedraal.png');
+  background-color: rgba(255,255,255,.7);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#vestingVideo:hover {
+  background-color: rgba(255,255,255,.75);
+}
