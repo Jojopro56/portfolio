@@ -66,35 +66,9 @@
     background-color: #333;
 }
 
-#blikveld {
-  background-image: url('/afb/blikveld-thumb.png');
-  background-color: rgba(255,255,255,.9);
-  background-blend-mode: lighten;
-  background-size: cover;
-  background-position: center;
-  transition: all .3s;
-}
-
-#blikveld:hover {
-  background-color: rgba(255,255,255,.75);
-}
-
-#jubileum-fpf {
-  background-image: url('/afb/fpfjub-thumb.jpg');
-  background-color: rgba(255,255,255,.9);
-  background-blend-mode: lighten;
-  background-size: cover;
-  background-position: center;
-  transition: all .3s;
-}
-
-#jubileum-fpf:hover {
-  background-color: rgba(255,255,255,.75);
-}
-
 #stereo {
-  background-image: url('/afb/stereo-thumb.png');
-  background-color: rgba(255,255,255,.9);
+  background-image: url('/afb/stereo-thumb2.png');
+  background-color: rgba(255,255,255,.75);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -102,12 +76,12 @@
 }
 
 #stereo:hover {
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,.5);
 }
 
 #meldkamer {
-  background-image: url('/afb/noodgeval-logo.png');
-  background-color: rgba(255,255,255,.7);
+  background-image: url('/afb/burgernet-thumb.png');
+  background-color: rgba(255,255,255,.75);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -115,12 +89,12 @@
 }
 
 #meldkamer:hover {
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,.5);
 }
 
 #vestingVideo {
   background-image: url('/afb/kathedraal.png');
-  background-color: rgba(255,255,255,.7);
+  background-color: rgba(255,255,255,.75);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -128,12 +102,12 @@
 }
 
 #vestingVideo:hover {
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,.5);
 }
 
 #consumptie {
   background-image: url('/afb/consumptie-thumb.png');
-  background-color: rgba(255,255,255,.7);
+  background-color: rgba(255,255,255,.75);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -141,5 +115,5 @@
 }
 
 #consumptie:hover {
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,.5);
 }

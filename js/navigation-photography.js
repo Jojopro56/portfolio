@@ -3,6 +3,11 @@ document.getElementById("viva").addEventListener("click", function(event) {
     window.location.href = "viva.html"; // Navigate to portfolio.html
 });
 
+document.getElementById("viva24").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default link behavior
+    window.location.href = "viva-2024.html"; // Navigate to portfolio.html
+});
+
 document.getElementById("vintage").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent default link behavior
     window.location.href = "vintage.html"; // Navigate to portfolio.html

@@ -105,6 +105,19 @@
   background-color: rgba(255,255,255,.75);
 }
 
+#viva24 {
+  background-image: url('/afb/viva24/viva24-4.jpg');
+  background-color: rgba(255,255,255,.9);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#viva24:hover {
+  background-color: rgba(255,255,255,.75);
+}
+
 #all {
   background-image: url('/afb/all-thumb.jpg');
   background-color: rgba(255,255,255,.9);

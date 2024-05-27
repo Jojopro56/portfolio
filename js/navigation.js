@@ -5,7 +5,7 @@ document.getElementById("portfolio").addEventListener("click", function(event) {
 
 document.getElementById("latest-work").addEventListener("click", function(event) {
     event.preventDefault(); // Prevent default link behavior
-    window.location.href = "blikveld.html"; // Navigate to portfolio.html
+    window.location.href = "viva-2024-latest.html"; // Navigate to portfolio.html
 });
 
 document.getElementById("about-me").addEventListener("click", function(event) {
