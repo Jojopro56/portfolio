@@ -93,7 +93,7 @@
 }
 
 #stereo {
-  background-image: url('/afb/stereo-thumb.png');
+  background-image: url('/afb/stereo-thumb2.png');
   background-color: rgba(255,255,255,.9);
   background-blend-mode: lighten;
   background-size: cover;
@@ -106,8 +106,8 @@
 }
 
 #meldkamer {
-  background-image: url('/afb/noodgeval-logo.png');
-  background-color: rgba(255,255,255,.7);
+  background-image: url('/afb/burgernet-thumb.png');
+  background-color: rgba(255,255,255,.9);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -120,7 +120,7 @@
 
 #vestingVideo {
   background-image: url('/afb/kathedraal.png');
-  background-color: rgba(255,255,255,.7);
+  background-color: rgba(255,255,255,.9);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;

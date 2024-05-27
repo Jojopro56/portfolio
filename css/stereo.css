@@ -36,19 +36,19 @@ img {
 .img-container {
     max-width: 100%;
     margin-top: 60px;
-    height: 400px; /* Set a fixed height for the image container */
+    height: auto; /* Set a fixed height for the image container */
     overflow: hidden; /* Hide any overflow */
 }
 
 .img-container img {
-    height: 100%;
-    object-fit: cov er; /* Scale the image to cover the entire container while preserving its aspect ratio */
+    max-height: 100%;
+    height: auto;
 }
 
 
 
 article {
-    display: flex;
+    display: flex; 
     justify-content: space-around;
     margin-top: 40px;
 }
