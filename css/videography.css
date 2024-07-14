@@ -66,6 +66,19 @@
     background-color: #333;
 }
 
+#BLIKVELD {
+  background-image: url('/afb/blikveld/BLIKVELD_thumbnail.png');
+  background-color: rgba(255,255,255,.75);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s;
+}
+
+#BLIKVELD:hover {
+  background-color: rgba(255,255,255,.5);
+}
+
 #stereo {
   background-image: url('/afb/stereo-thumb2.png');
   background-color: rgba(255,255,255,.75);
