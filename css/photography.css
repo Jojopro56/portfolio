@@ -68,7 +68,7 @@
 
 #classic {
   background-image: url('/afb/classic-thumb.jpg');
-  background-color: rgba(255,255,255,.9);
+  background-color: rgba(255,255,255,.75);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -76,12 +76,12 @@
 }
 
 #classic:hover {
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,.5);
 }
 
 #vintage {
   background-image: url('/afb/vintage-thumb.jpg');
-  background-color: rgba(255,255,255,.9);
+  background-color: rgba(255,255,255,.75);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -89,12 +89,12 @@
 }
 
 #vintage:hover {
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,.5);
 }
 
 #viva {
   background-image: url('/afb/viva-thumb.png');
-  background-color: rgba(255,255,255,.9);
+  background-color: rgba(255,255,255,.75);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -102,12 +102,12 @@
 }
 
 #viva:hover {
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,.5);
 }
 
 #viva24 {
   background-image: url('/afb/viva24/viva24-4.jpg');
-  background-color: rgba(255,255,255,.9);
+  background-color: rgba(255,255,255,.75);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -115,12 +115,12 @@
 }
 
 #viva24:hover {
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,.5);
 }
 
 #all {
   background-image: url('/afb/all-thumb.jpg');
-  background-color: rgba(255,255,255,.9);
+  background-color: rgba(255,255,255,.75);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -128,5 +128,5 @@
 }
 
 #all:hover {
-  background-color: rgba(255,255,255,.75);
+  background-color: rgba(255,255,255,.5);
 }

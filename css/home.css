@@ -132,8 +132,8 @@ blockquote h2 {
 }
 
 #latest-work {
-  background-image: url('/afb/viva24/viva24-4.jpg');
-  background-color: rgba(255, 255, 255, .75);
+  background-image: url('/afb/blikveld/BLIKVELD_thumbnail.png');
+  background-color: rgba(255, 255, 255, .70);
   background-blend-mode: lighten;
   background-size: cover;
   background-position: center;
@@ -145,7 +145,7 @@ blockquote h2 {
 }
 
 #portfolio {
-  background-image: url('/afb/vintage-thumb.jpg');
+  background-image: url('/afb/bts/studio-desk.jpg');
   background-color: rgba(255, 255, 255, .75);
   background-blend-mode: lighten;
   background-size: cover;
@@ -362,6 +362,8 @@ footer .copyright {
   width: 100%;
   height: 100%;
 }
+
+
 
 
 
