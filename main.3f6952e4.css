@@ -78,5 +78,23 @@
     }
   }
 
+  @media (max-width: 600px) {
+    .index-phone {
+      scale: .7;
+      font-size: 2rem;
+    }
+
+    .ignore-typing {
+      position: absolute;
+      top: 55%;
+    }
+
+    .ignore-typing-button{
+      position: absolute;
+      top: 110%;
+    }
+
+  }
+
   
   
