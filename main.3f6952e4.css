@@ -19,4 +19,40 @@
   .iframe-container {
     text-align: center; /* Ensures the iframe and title are centered */
   }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+  
+  p {
+    font-size: 1.5rem;
+  }
+  
+  .scale {
+    scale: 1.5;
+  }
+
+  .contact-box {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+  
+  }
+
+  .contact-box ul {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 780px) {
+    .index-phone {
+      scale: .8;
+    }
+
+    .btn-default {
+      margin-top: 100px;
+      scale: 1.5;
+    }
+  }
+
+  
   
