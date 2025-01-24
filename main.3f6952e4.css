@@ -43,14 +43,38 @@
     font-size: 1.6rem;
   }
 
+  .ignore-typing-button{
+    background-color: black;
+    padding: 10px;
+  }
+
   @media (max-width: 780px) {
     .index-phone {
       scale: .8;
+      font-size: 2rem;
+    }
+
+    .index-phone p {
+      font-size: 2rem;
     }
 
     .btn-default {
       margin-top: 100px;
       scale: 1.5;
+    }
+
+    .hero-full-container .hero-full-wrapper .text-content {
+      vertical-align: top;
+    }
+
+    .ignore-typing {
+      position: absolute;
+      top: 40%;
+    }
+
+    .ignore-typing-button{
+      position: absolute;
+      top: 100%;
     }
   }
 
