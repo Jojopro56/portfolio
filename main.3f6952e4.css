@@ -89,7 +89,7 @@
 
   @media (max-width: 600px) {
     .index-phone {
-      scale: .7;
+      scale: .6;
       font-size: 2rem;
     }
 
@@ -116,18 +116,18 @@
 
   @media (max-height: 530px) {
     .index-phone {
-      scale: .6;
+      scale: .5;
       font-size: 2rem;
     }
 
     .ignore-typing {
-      top: 65%;
+      top: 80%;
     }
 
     .ignore-typing-button{
       position: absolute;
       margin-top: 0px;
-      top: 120%;
+      top: 140%;
     }
 
   }
