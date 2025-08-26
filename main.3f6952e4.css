@@ -25,7 +25,8 @@
   }
   
   p {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 400;
   }
   
   .scale {
@@ -44,8 +45,15 @@
   }
 
   .ignore-typing-button{
+    display: block;
+    margin-top: 60px;
+    max-width: fit-content;
     background-color: black;
     padding: 10px;
+  }
+
+  #margin-top{
+    margin-top: 100px;
   }
 
   @media (max-width: 780px) {
@@ -55,7 +63,7 @@
     }
 
     .index-phone p {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     .btn-default {
@@ -74,19 +82,29 @@
 
     .ignore-typing-button{
       position: absolute;
+      margin-top: 0px;
       top: 100%;
     }
   }
 
   @media (max-width: 600px) {
     .index-phone {
-      scale: .7;
+      scale: .6;
       font-size: 2rem;
+    }
+
+    h1 {
+      font-size: 8rem;
+    }
+
+    .index-phone p {
+      font-size: 2.5rem;
+      line-height: 3rem;
     }
 
     .ignore-typing {
       position: absolute;
-      top: 55%;
+      top: 60%;
     }
 
     .ignore-typing-button{
@@ -95,6 +113,25 @@
     }
 
   }
+
+  @media (max-height: 530px) {
+    .index-phone {
+      scale: .5;
+      font-size: 2rem;
+    }
+
+    .ignore-typing {
+      top: 80%;
+    }
+
+    .ignore-typing-button{
+      position: absolute;
+      margin-top: 0px;
+      top: 140%;
+    }
+
+  }
+
 
   
   
