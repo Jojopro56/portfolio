@@ -25,9 +25,9 @@
   <div id="site-border-right"></div>
   <div id="site-border-top"></div>
   <div id="site-border-bottom"></div>
-  <!-- Add your content of header -->
+
   <header>
-    <nav class="navbar  navbar-fixed-top navbar-inverse">
+    <nav class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
           aria-expanded="false">
@@ -36,21 +36,18 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav ">
+          <ul class="nav navbar-nav">
             <li><a href="./index.html" title="">01 : Home</a></li>
             <li><a href="./works.html" title="">02 : Works</a></li>
             <li><a href="./about.html" title="">03 : About me</a></li>
             <li><a href="./contact.html" title="">04 : Contact</a></li>
           </ul>
-
-
         </div>
       </div>
     </nav>
   </header>
-  <!-- Add your site or app content here -->
+
   <div class="hero-full-container background-image-container white-text-container"
     style="background-image: url('./img/home/vissen-seaworld-1.jpg')">
     <div class="container">
@@ -60,26 +57,539 @@
             <div class="text-content index-phone">
               <h1>Hello,<br>
                 <span id="typed-strings">
-                  <span>I'm Joey van der Linden</span>
+                  <span>I'm Joey!</span>
                   <span>Dutch 🇳🇱 Creator</span>
                   <span>Creative Producer</span>
                   <span>Photo Expert</span>
                 </span>
                 <span id="typed"></span>
               </h1>
-
-              <p class="ignore-typing">"I make videos and photos that tell your story, because 'professional overthinker' wasn’t a real job title. Or is it? Hmmm, I'll let you decide on that."
-              </p>
-
-              <a class="ignore-typing-button" href="./works.html" title="">Discover More</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <p class="container ignore-typing">"I make videos and photos that tell your story, because 'professional
+      overthinker' wasn’t a real job title. Or is it? Hmmm, I'll let you decide on that."
+    </p>
+
+    <div class="container"><a class="ignore-typing-button" href="#video-container" title="">Discover More</a></div>
+
+
   </div>
 
-  
+  <!-- Video section with background and popup -->
+  <div id="video-container" class="hero-full-container background-video-container white-text-container"
+    style="position: relative; overflow: hidden; height: 100vh;">
+
+    <!-- YouTube Background Video -->
+    <div id="player"
+      style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; pointer-events: none;">
+    </div>
+
+    <!-- Play button -->
+    <div id="play-overlay">
+      <div class="play-button-wrapper">
+        <button id="play-button" aria-label="Play video">
+          <svg viewBox="0 0 100 100" width="40" height="40">
+            <circle cx="50" cy="50" r="50" fill="white" />
+            <polygon points="40,30 70,50 40,70" fill="black" />
+          </svg>
+        </button>
+        <span class="play-label">Play Demo Reel</span>
+      </div>
+    </div>
+
+    <!-- Popup Overlay with video and close button -->
+    <div id="video-popup" class="hidden">
+      <button id="close-video" aria-label="Close video popup">&times;</button>
+      <div class="video-popup-content">
+        <iframe id="popup-iframe" data-src="https://www.youtube.com/embed/w6AvLD3vF7A?autoplay=1" frameborder="0"
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Mobile fallback image -->
+    <img id="fallback-image" src="./img/home/thumbnail-demo.png" alt="Fallback background image">
+  </div>
+
+  <style>
+    .noscroll {
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    #video-popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #video-popup.fade-in {
+      animation: fadeInOverlay 0.6s ease forwards;
+      display: flex !important;
+    }
+
+    @keyframes fadeInOverlay {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .video-popup-content {
+      position: relative;
+      width: 80%;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-popup-content iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    #close-video {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 3rem;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 10000;
+    }
+
+    #play-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      text-align: center;
+    }
+
+    #play-button {
+      border: none;
+      cursor: pointer;
+    }
+
+    .play-label {
+      color: black;
+      display: block;
+      margin-top: 0.5em;
+      font-size: 1.2em;
+    }
+  </style>
+
+  <section id="about-overview" class="anchor-spacer about-overview-section">
+    <span id="about">&nbsp;</span>
+    <div class="container about-wrapper">
+      <div class="intro-label">
+        <p class="intro-text">Skillset</p>
+      </div>
+      <div class="overview-heading">
+        <h2 class="overview-title">Overview.</h2>
+      </div>
+      <div class="overview-content">
+        <div class="profile-column">
+          <div class="profile-image-wrapper">
+            <img src="./img/about/joey-forest-1.jpg" alt="Sunny Patel" class="profile-image" />
+          </div>
+          <div class="button-group">
+            <a href="./assets/documents/CV-Joey25.pdf" download class="btn-gradient resume-btn">
+              <span class="btn-label">Resume</span>
+            </a>
+            <a href="https://www.linkedin.com/in/joeyvdl/" target="_blank" rel="noopener noreferrer"
+              class="btn-gradient linkedin-btn">
+              <span class="btn-label">LinkedIn</span>
+            </a>
+            <a href="https://www.youtube.com/@joeyvanderlinden" target="_blank" rel="noopener noreferrer"
+              class="btn-gradient github-btn">
+              <span class="btn-label">YouTube</span>
+            </a>
+          </div>
+
+        </div>
+        <div class="description-column">
+          <ul class="overview-list">
+            <li><span class="emoji">📸</span><span>I'm an audio-visual producer with over 3 years of experience in
+                photography.</span></li>
+            <li><span class="emoji">🎓</span><span>Full-time Communication and Multimedia Design student working towards
+                graduation to eventually join the media industry.</span></li>
+            <li><span class="emoji">🎬</span><span>I've worked on both low- and high-production-value projects, often
+                starting from deep and creative brainstorming sessions.</span></li>
+            <li><span class="emoji">🧰</span><span>Studio production, on-site live coverage, event reels, and much
+                more—I'm a jack-of-many-trades!</span></li>
+            <li><span class="emoji">🚀</span><span>I'm working towards my dream of producing something with major
+                societal impact, one
+                project at a time.</span></li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="client-logos" class="anchor-spacer logo-carousel-section white-text-container">
+    <div class="container">
+      <h2 class="partners-title" id="remove-padding">Partners I've Collaborated With</h2>
+      <div class="logo-carousel">
+        <div class="logo-track">
+          <!-- Set 1 -->
+          <a href="https://hightechxl.com/" target="_blank" rel="noopener">
+            <img class="whitesvg logo-img" src="./img/logo/htxl-logo.svg" alt="HTXL logo" />
+          </a>
+          <a href="https://stadslabssittardgeleen.nl/" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/stadslab-logo.png" alt="Stadslab logo" />
+          </a>
+          <a href="https://www.instagram.com/fiat_punto_fanatics/" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/fpf-logo.svg" alt="FPF logo" />
+          </a>
+          <a href="https://www.burgernet.nl/" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/burgernet-logo.webimage" alt="Burgernet logo" />
+          </a>
+          <a href="https://www.asml.com/en" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/asml-logo.svg" alt="ASML logo" />
+          </a>
+
+          <!-- Set 2 (duplicate for seamless loop) -->
+          <a href="https://hightechxl.com/" target="_blank" rel="noopener">
+            <img class="whitesvg logo-img" src="./img/logo/htxl-logo.svg" alt="HTXL logo" />
+          </a>
+          <a href="https://stadslabssittardgeleen.nl/" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/stadslab-logo.png" alt="Stadslab logo" />
+          </a>
+          <a href="https://www.instagram.com/fiat_punto_fanatics/" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/fpf-logo.svg" alt="FPF logo" />
+          </a>
+          <a href="https://www.burgernet.nl/" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/burgernet-logo.webimage" alt="Burgernet logo" />
+          </a>
+          <a href="https://www.asml.com/en" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/asml-logo.svg" alt="ASML logo" />
+          </a>
+
+          <!-- Set 3 (duplicate for seamless loop) -->
+          <a href="https://hightechxl.com/" target="_blank" rel="noopener">
+            <img class="whitesvg logo-img" src="./img/logo/htxl-logo.svg" alt="HTXL logo" />
+          </a>
+          <a href="https://stadslabssittardgeleen.nl/" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/stadslab-logo.png" alt="Stadslab logo" />
+          </a>
+          <a href="https://www.instagram.com/fiat_punto_fanatics/" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/fpf-logo.svg" alt="FPF logo" />
+          </a>
+          <a href="https://www.burgernet.nl/" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/burgernet-logo.webimage" alt="Burgernet logo" />
+          </a>
+          <a href="https://www.asml.com/en" target="_blank" rel="noopener">
+            <img class="logo-img" src="./img/logo/asml-logo.svg" alt="ASML logo" />
+          </a>
+        </div>
+
+  </section>
+
+  <section class="silvery-media-section">
+    <div class="hero-full-container background-video-container white-text-container">
+
+      <div class="vimeo-background-wrapper">
+        <iframe
+          src="https://player.vimeo.com/video/1112895901?h=0945361f1f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1"
+          frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+          title="fpf-jubi-FINAL1">
+        </iframe>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+
+      <div class="video-overlay"></div>
+
+      <img id="fallback-image" src="./img/home/vissen-seaworld-1.jpg" alt="Fallback background image">
+
+      <div class="container silvery-media-container">
+        <div class="silvery-media-text">
+          <h2 class="silvery-media-title">Silvery Media</h2>
+          <p class="silvery-media-description">
+            Silvery Media is my personal automotive platform, a dedicated space where I showcase my passion
+            for capturing the beauty and essence of automobiles. Through my lens, I aim to highlight the unique design,
+            raw power, and intricate details that make each vehicle special, presenting them in a way that truly
+            resonates
+            with fellow car enthusiasts and art appreciators alike.
+          </p>
+
+          <a class="ignore-typing-button" href="https://silvery.myportfolio.com/" target="_blank"
+            rel="noopener noreferrer">Discover More</a>
+        </div>
+        <div class="silvery-media-image-wrapper">
+          <img src="./img/logo/silvery-logo.png" alt="Silvery Media Showcase" class="silvery-media-image">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="testimonials" style="background-color: #000; color: #fff; padding: 60px 20px;">
+    <div class="testimonial-container">
+
+      <div class="testimonial">
+        <img src="./img/home/janneke.jpg" alt="Client 2" class="testimonial-img">
+        <p class="testimonial-quote">"You pay attention to researching new techniques and you take on challenges. The
+          quality level of your camera work and final product is good. You started on time and you actively seek contact and
+          feedback from the teacher(s), that is strong
+          self-management."</p>
+        <p class="testimonial-name">Janneke Roijers<br><span class="testimonial-role">Lecturer Audiovisual Design</span>
+        </p>
+      </div>
+
+      <div class="testimonial">
+        <img src="./img/home/christos.jpg" alt="Client 1" class="testimonial-img">
+        <p class="testimonial-quote">"Joey works systematically and demonstrates the ability to plan his duties in a
+          realistic and organized
+          manner. He consistently meets set deadlines and, when faced with challenges, communicates proactively
+          and in a timely fashion to manage expectations."</p>
+        <p class="testimonial-name">Christos Bousis<br><span class="testimonial-role">Videographer at Hightechxl</span>
+        </p>
+      </div>
+
+      <div class="testimonial">
+        <img src="./img/home/michiel.png" alt="Client 3" class="testimonial-img">
+        <p class="testimonial-quote">"You notice from everything you do that you don't 'just do this', but actually do
+          it with heart
+          and soul. You see things through your lens that others miss, the atmosphere, the love for cars. Every shoot
+          with you is relaxed, spontaneous and above all cozy. You are not only a creative with skills, but also a
+          nice guy with a passion for what you do!"</p>
+        <p class="testimonial-name">Michiel Vriens<br><span class="testimonial-role">Moderator Fiatpuntofanatics</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="cta-section" class="cta-section">
+    <div class="cta-content">
+      <h2 class="cta-title">Ready to make something incredible?</h2>
+      <p class="cta-subtitle">Feel free to contact me so I can help you visualize your story</p>
+      <a href="./contact.html" class="cta-button">Contact</a>
+    </div>
+  </section>
+
+  <button id="back-to-top" title="Go to top">
+    ↑
+  </button>
+
+  <!-- Progress Bar -->
+  <div class="scroll-progress">
+    <div class="progress-line"></div>
+    <ul class="progress-steps">
+      <li data-section="hero-full-container" data-label="Introduction"></li>
+      <li data-section="player" data-label="Demo Reel"></li>
+      <li data-section="about-overview-section" data-label="Skills"></li>
+      <li data-section="logo-carousel-section" data-label="Partners"></li>
+      <li data-section="silvery-media-section" data-label="Silvery Media"></li>
+      <li data-section="testimonials" data-label="Testimonials"></li>
+      <li data-section="cta-section" data-label="Contact"></li>
+    </ul>
+  </div>
+
+
+
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="./index.html">01 : Home</a>
+        <a href="./works.html">02 : Works</a>
+        <a href="./about.html">03 : About me</a>
+        <a href="./contact.html">04 : Contact</a>
+      </div>
+      <div class="footer-logo">
+        <img src="./img/logo/WHITE-jvdl-logo.svg" alt="Joey van der Linden Logo" />
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = [
+        "hero-full-container",  // class
+        "player",               // id
+        "about-overview-section",
+        "logo-carousel-section",
+        "silvery-media-section",
+        "testimonials",         // id
+        "cta-section"
+      ];
+
+      const steps = document.querySelectorAll(".progress-steps li");
+
+      // Highlight correct step on scroll
+      function updateProgress() {
+        let currentIndex = -1;
+
+        sections.forEach((id, index) => {
+          const section =
+            document.querySelector("." + id) ||
+            document.getElementById(id);
+
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            const sectionMid = rect.top + rect.height / 2;
+
+            if (sectionMid >= 0 && sectionMid <= window.innerHeight) {
+              currentIndex = index;
+            }
+          }
+        });
+
+        if (currentIndex === -1) {
+          // fallback: pick the first section in view
+          currentIndex = 0;
+        }
+
+        steps.forEach((step, index) => {
+          step.classList.toggle("active", index === currentIndex);
+        });
+      }
+
+      // Smooth scroll on click
+      steps.forEach((step, index) => {
+        step.addEventListener("click", () => {
+          const target =
+            document.querySelector("." + sections[index]) ||
+            document.getElementById(sections[index]);
+
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+          }
+        });
+      });
+
+
+      window.addEventListener("scroll", updateProgress);
+      updateProgress(); // run once on load
+    });
+  </script>
+
+
+
+
+
+  <!-- YouTube Player API -->
+  <script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        videoId: 'w6AvLD3vF7A',
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          showinfo: 0,
+          modestbranding: 1,
+          loop: 1,
+          mute: 1,
+          rel: 0,
+          playlist: 'w6AvLD3vF7A'
+        },
+        events: {
+          onReady: function (e) {
+            e.target.mute();
+            e.target.playVideo();
+          }
+        }
+      });
+    }
+  </script>
+
+  <script>
+    // Show/hide button
+    window.addEventListener("scroll", function () {
+      const button = document.getElementById("back-to-top");
+      if (window.scrollY > 400) {
+        button.style.display = "flex";
+      } else {
+        button.style.display = "none";
+      }
+    });
+
+    // Scroll to top
+    document.getElementById("back-to-top").addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+
+
+
+  <script>
+    const playButton = document.getElementById("play-button");
+    const closeButton = document.getElementById("close-video");
+    const popup = document.getElementById("video-popup");
+    const iframe = document.getElementById("popup-iframe");
+    const playOverlay = document.getElementById("play-overlay");
+    const progressBar = document.querySelector(".scroll-progress");
+
+    playButton.addEventListener("click", () => {
+      // Show video overlay
+      popup.classList.remove("hidden");
+      popup.classList.add("fade-in");
+      document.body.classList.add("noscroll");
+      playOverlay.style.display = "none";
+
+      // Disable progress bar
+      if (progressBar) {
+        progressBar.style.pointerEvents = "none"; // disable clicks
+        progressBar.style.opacity = "0.4"; // dim visually
+      }
+
+      // Set iframe src after fade-in completes
+      setTimeout(() => {
+        iframe.setAttribute("src", iframe.getAttribute("data-src"));
+      }, 600);
+    });
+
+    closeButton.addEventListener("click", () => {
+      // Hide video overlay
+      popup.classList.add("hidden");
+      popup.classList.remove("fade-in");
+      document.body.classList.remove("noscroll");
+      playOverlay.style.display = "block";
+
+      // Enable progress bar
+      if (progressBar) {
+        progressBar.style.pointerEvents = "auto"; // enable clicks
+        progressBar.style.opacity = "1"; // restore full opacity
+      }
+
+      // Stop video
+      iframe.setAttribute("src", "");
+    });
+  </script>
 
 
   <script>
@@ -89,8 +599,8 @@
     });
   </script>
 
-
   <script type="text/javascript" src="./main.70a66962.js"></script>
 </body>
+
 
 </html>
