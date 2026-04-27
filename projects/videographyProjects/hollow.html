@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
   <link href="/img/logo/WHITE-jvdl-logo.svg" rel="icon">
 
-  <title>BLIKVELD</title>
+  <title>HOLLOW Music Video</title>
 
   <link href="/main.3f6952e4.css" rel="stylesheet">
 
@@ -33,8 +33,7 @@
       --color-bg: #050505;
       --color-card: #121212;
       --color-text: #ffffff;
-      --color-accent: #FFE600;
-      /* Yellow */
+      --color-accent: #00D8B6; /* Turquoise Green */
       --font-display: 'Anton', sans-serif;
       --font-body: 'Inter', sans-serif;
       --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -122,7 +121,7 @@
 
       /* Adjust Hero Title size on mobile */
       .hero-title {
-        font-size: 3rem !important;
+        font-size: 3.5rem !important;
       }
 
       .section-title {
@@ -143,7 +142,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 1)), url('/img/projects/blikveld/bg_image_hero.png');
+      /* Update the background image to fit your music video */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 1)), url('/img/projects/HOLLOW/bg-hollow.png');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -157,9 +157,11 @@
     }
 
     .hero-title {
-      font-size: 5rem;
+      font-size: 6rem;
       line-height: 1;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      color: var(--color-accent) !important;
+      letter-spacing: 2px;
     }
 
     .highlight {
@@ -213,6 +215,7 @@
       color: var(--color-accent);
       text-transform: uppercase;
       letter-spacing: 1px;
+      text-align: center;
     }
 
     /* BTS Hover Effect */
@@ -250,6 +253,19 @@
     .bts-item:hover .bts-overlay {
       transform: translateY(0);
     }
+    
+    /* Award Cards */
+    .award-card {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .award-img {
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+      filter: drop-shadow(0px 10px 15px rgba(0, 216, 182, 0.2));
+    }
 
     /* Footer CTA */
     .footer-cta {
@@ -267,12 +283,10 @@
     }
 
     /* --- FIXED BUTTON STYLES --- */
-    /* Used a more specific selector to override the general link color */
     .footer-cta .cta-btn {
       display: inline-block;
       background: #000;
       color: #fff !important;
-      /* White text on black background */
       padding: 15px 30px;
       font-weight: bold;
       text-transform: uppercase;
@@ -280,13 +294,11 @@
       text-decoration: none;
       transition: all 0.3s ease;
       border: 2px solid #000;
-      /* Added border for better definition */
     }
 
     .footer-cta .cta-btn:hover {
       background: #fff;
       color: #000 !important;
-      /* Black text on white background */
       text-decoration: none;
       border-color: #000;
     }
@@ -334,7 +346,7 @@
       max-height: 75vh;
       object-fit: contain;
       border: 2px solid var(--color-accent);
-      box-shadow: 0 0 30px rgba(255, 230, 0, 0.2); /* Adjusted for yellow theme */
+      box-shadow: 0 0 30px rgba(0, 216, 182, 0.2);
       transform: scale(0.9);
       transition: transform 0.3s ease;
     }
@@ -402,9 +414,8 @@
 
   <div class="hero">
     <div class="hero-content reveal">
-      <img src="/img/logo/logo_blikveld_yellow.png" alt="">
-      <p style="font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; color:white !important;">A Joey van
-        der Linden Film</p>
+      <h1 class="hero-title">HOLLOW</h1>
+      <p style="font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; color:white !important;">By ZACHY</p>
     </div>
   </div>
 
@@ -412,11 +423,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center reveal">
-          <h2 class="section-title">The Story</h2>
+          <h2 class="section-title">The Concept</h2>
+          <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 20px;">
+            Set to the haunting backdrop of <strong>"Hollow" by Zachy</strong>, this music video is a raw, visual exploration of escapism and consequence. The film dives deep into a poignant question: What happens when someone tries to surgically remove their own emotions through substance abuse? Through deliberate lighting and visceral cinematography, the video physically manifests the feeling of emotional numbness and the chaotic, inevitable spiral that follows.
+          </p>
           <p style="font-size: 1.2rem; line-height: 1.8;">
-            BLIKVELD is a Documentary Short Film that dives into the struggles and daily lives of several young
-            individuals. They live in an area called "De Westelijke Mijnstreek" located in Limburg, The Netherlands
-            which is notorious for high crime rates, and youth problems. 
+            Conceived as a passion project specifically for the <strong>2026 Northwest Missouri State University Film Festival</strong>, the entire video was brought to life in a demanding two-week window. This incredibly tight turnaround forced us to rely heavily on creative, in-camera practical lighting and bold cinematic choices—an intense, fast-paced process that ultimately shaped the award-winning look and feel of the final film.
           </p>
         </div>
       </div>
@@ -425,61 +437,77 @@
 
   <div class="docu-section" style="background-color: #0a0a0a;">
     <div class="container">
-      <h2 class="section-title reveal">Watch Now</h2>
-
+      <h2 class="section-title reveal">2026 NWMSU Film Festival</h2>
       <div class="row">
+        
         <div class="col-md-6 reveal">
-          <div class="video-card">
-            <div class="iframe-wrapper">
-              <iframe src="https://www.youtube.com/embed/9GgFJyE18zM?si=zuSVpvj5756zBF96" allowfullscreen></iframe>
-            </div>
-            <div class="video-label">Originele Versie (OV)</div>
+          <div class="award-card">
+            <img src="/img/projects/HOLLOW/award-light.png" class="award-img" alt="Best Lighting">
+            <h3 style="color: var(--color-accent) !important; font-size: 2.2rem;">Best Lighting</h3>
+            <p>Recognized for outstanding use of color theory, dynamic stage lighting, and practical in-camera effects to shape the mood of the video.</p>
           </div>
         </div>
 
         <div class="col-md-6 reveal">
-          <div class="video-card">
-            <div class="iframe-wrapper">
-              <iframe src="https://www.youtube.com/embed/Z4Ecm_Cqjzc?si=ndKV0nIWQn9mGQhg" allowfullscreen></iframe>
-            </div>
-            <div class="video-label">English Subtitles</div>
+          <div class="award-card">
+            <img src="/img/projects/HOLLOW/award-overall.png" class="award-img" alt="Best Overall Digital Cinematography">
+            <h3 style="color: var(--color-accent) !important; font-size: 2.2rem;">Best Overall Digital Cinematography Film</h3>
+            <p>Awarded for exceptional camera movement, composition, and a cohesive visual language that elevated the music's narrative.</p>
           </div>
         </div>
+
       </div>
     </div>
   </div>
 
   <div class="docu-section">
     <div class="container">
+      <h2 class="section-title reveal">Watch Now</h2>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 reveal">
+          <div class="video-card">
+            <iframe src="https://drive.google.com/file/d/1AnuXNHljabPF_WdoRClFuk__Ix2Ssvod/preview" width="100%" height="480"></iframe>
+            <div class="video-label">Music Video</div>
+            <p style="font-size: 1.2rem; line-height: 1.8;">
+            This video contains copyrighted music and is therefore only viewable/downloadable through Google Drive.
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="docu-section" style="background-color: #0a0a0a;">
+    <div class="container">
       <h2 class="section-title reveal">Behind The Scenes</h2>
 
       <div class="row">
         <div class="col-md-4 col-sm-6 reveal">
           <div class="bts-item">
-            <img src="/img/projects/blikveld/theplace_bts.jpeg" class="bts-img" alt="Joey Headset">
+            <img src="/img/projects/HOLLOW/lights.jpg" class="bts-img" alt="Lighting Setup">
             <div class="bts-overlay">
-              <h4 style="margin:0; color:#FFE600 !important">Interview</h4>
-              <p style="color:white !important">Setup for interview at "The Place"</p>
+              <h4 style="margin:0; color:var(--color-accent) !important">Setting The Mood</h4>
+              <p style="color:white !important">Rigging LED bars with fabric in front for diffusion.</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 col-sm-6 reveal">
           <div class="bts-item">
-            <img src="/img/projects/blikveld/cce_bts.jpg" class="bts-img" alt="Inner">
+            <img src="/img/projects/HOLLOW/car.jpg" class="bts-img" alt="Cinematography">
             <div class="bts-overlay">
-              <h4 style="margin:0; color:#FFE600 !important">B-Roll</h4>
-              <p style="color:white !important">Recording of additional abstract footage</p>
+              <h4 style="margin:0; color:var(--color-accent) !important">Camera Movement</h4>
+              <p style="color:white !important">Car mount rig while vehicle is on a trailer.</p>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 col-sm-6 reveal">
           <div class="bts-item">
-            <img src="/img/projects/blikveld/boa_bts.webp" class="bts-img" alt="Camera Setup">
+            <img src="/img/projects/HOLLOW/cast.jpg" class="bts-img" alt="Directing">
             <div class="bts-overlay">
-              <h4 style="margin:0; color:#FFE600 !important">Selfie!</h4>
-              <p style="color:white !important">Cooperation with local youth enforcement</p>
+              <h4 style="margin:0; color:var(--color-accent) !important">Action!</h4>
+              <p style="color:white !important">Directing talent between takes.</p>
             </div>
           </div>
         </div>
@@ -526,10 +554,8 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // Your existing nav function if needed
       if (typeof navActivePage === 'function') { navActivePage(); }
 
-      // Scroll Reveal Animation
       const reveals = document.querySelectorAll('.reveal');
       const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
@@ -542,12 +568,11 @@
         });
       };
       window.addEventListener('scroll', revealOnScroll);
-      revealOnScroll(); // Trigger once on load
+      revealOnScroll(); 
     });
   </script>
 
   <script>
-    // Show/hide button
     window.addEventListener("scroll", function () {
       const button = document.getElementById("back-to-top");
       if (window.scrollY > 400) {
@@ -557,7 +582,6 @@
       }
     });
 
-    // Scroll to top
     document.getElementById("back-to-top").addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
