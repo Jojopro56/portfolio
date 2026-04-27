@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width,initial-scale=1" name="viewport">
+  <meta content="description" name="description">
+  <meta name="google" content="notranslate" />
+  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-icon-180x180.png">
+  <link href="/img/logo/WHITE-jvdl-logo.svg" rel="icon">
+
+  <title>BLIKVELD</title>
+
+  <link href="/main.3f6952e4.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* =========================================
+       CINEMATIC DARK MODE OVERRIDES
+       (Forces Dark Mode over your Global CSS)
+       ========================================= */
+
+    :root {
+      --color-bg: #050505;
+      --color-card: #121212;
+      --color-text: #ffffff;
+      --color-accent: #FFE600;
+      /* Yellow */
+      --font-display: 'Anton', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    /* 1. Force Body Background & Text Color (Desktop & Mobile) */
+    body {
+      background-color: var(--color-bg) !important;
+      color: var(--color-text) !important;
+      font-family: var(--font-body) !important;
+      overflow-x: hidden;
+    }
+
+    /* 2. Force Headings to White (Overriding your global h1, h2 rules) */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2 {
+      color: #ffffff !important;
+      font-family: var(--font-display) !important;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #cccccc !important;
+      font-family: var(--font-body) !important;
+    }
+
+    /* 3. Navbar Overrides (Making it transparent/dark) */
+    .navbar-default {
+      background-color: rgba(5, 5, 5, 0.9) !important;
+      /* Dark semi-transparent */
+      border-bottom: 1px solid #222 !important;
+      transition: background-color 0.3s;
+    }
+
+    .navbar-default .navbar-nav>li>a {
+      color: #fff !important;
+      /* Force white links */
+      font-family: var(--font-body);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 12px;
+    }
+
+    .navbar-default .navbar-nav>li>a:hover {
+      color: var(--color-accent) !important;
+    }
+
+    /* 4. MOBILE NAVBAR SPECIFICS (THE FIX) */
+    @media (max-width: 768px) {
+
+      /* Fix the Hamburger Button Background (The White Square Issue) */
+      .navbar-default .navbar-toggle {
+        background-color: transparent !important;
+        /* Removes the white block */
+        border-color: #fff !important;
+        /* Sets border to white */
+        margin-top: 15px;
+        /* Adjust vertical alignment if needed */
+      }
+
+      /* Force hamburger icon lines to white */
+      .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff !important;
+      }
+
+      /* Hover state for hamburger */
+      .navbar-default .navbar-toggle:hover,
+      .navbar-default .navbar-toggle:focus {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        /* Slight grey on click */
+      }
+
+      /* Force the dropdown menu background to black */
+      .navbar-default .navbar-collapse {
+        background-color: #050505 !important;
+        border-color: #333 !important;
+        box-shadow: none !important;
+      }
+
+      /* Adjust Hero Title size on mobile */
+      .hero-title {
+        font-size: 3rem !important;
+      }
+
+      .section-title {
+        font-size: 2rem !important;
+      }
+    }
+
+    /* =========================================
+       PAGE LAYOUT STYLES
+       ========================================= */
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(5, 5, 5, 1)), url('/img/projects/blikveld/bg_image_hero.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding-top: 60px;
+    }
+
+    .hero-content {
+      text-align: center;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .hero-title {
+      font-size: 5rem;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: var(--color-accent) !important;
+    }
+
+    /* General Sections */
+    .docu-section {
+      padding: 80px 0;
+    }
+
+    h2.section-title {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* Video Cards */
+    .video-card {
+      background: #111;
+      padding: 15px;
+      margin-bottom: 30px;
+      border: 1px solid #222;
+      transition: var(--transition);
+    }
+
+    .video-card:hover {
+      border-color: var(--color-accent);
+    }
+
+    .iframe-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 */
+      height: 0;
+      background: #000;
+    }
+
+    .iframe-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-label {
+      margin-top: 15px;
+      font-weight: 700;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* BTS Hover Effect */
+    .bts-item {
+      position: relative;
+      margin-bottom: 30px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .bts-img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: var(--transition);
+    }
+
+    .bts-item:hover .bts-img {
+      filter: grayscale(0%);
+      transform: scale(1.05);
+    }
+
+    .bts-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(transparent, #000);
+      transform: translateY(100%);
+      transition: var(--transition);
+    }
+
+    .bts-item:hover .bts-overlay {
+      transform: translateY(0);
+    }
+
+    /* Footer CTA */
+    .footer-cta {
+      background-color: var(--color-accent);
+      color: #050505 !important;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    /* Override footer heading/text color specifically for CTA */
+    .footer-cta h1,
+    .footer-cta p,
+    .footer-cta a {
+      color: #050505 !important;
+    }
+
+    /* --- FIXED BUTTON STYLES --- */
+    /* Used a more specific selector to override the general link color */
+    .footer-cta .cta-btn {
+      display: inline-block;
+      background: #000;
+      color: #fff !important;
+      /* White text on black background */
+      padding: 15px 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid #000;
+      /* Added border for better definition */
+    }
+
+    .footer-cta .cta-btn:hover {
+      background: #fff;
+      color: #000 !important;
+      /* Black text on white background */
+      text-decoration: none;
+      border-color: #000;
+    }
+
+    /* Scroll Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-fixed-top navbar-default">
+      <div class="container">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/index.html" title="">01 : Home</a></li>
+            <li><a href="/works.html" title="">02 : Works</a></li>
+            <li><a href="/about.html" title="">03 : About me</a></li>
+            <li><a href="/contact.html" title="">04 : Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-content reveal">
+      <img src="/img/logo/logo_blikveld_yellow.png" alt="">
+      <p style="font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; color:white !important;">A Joey van
+        der Linden Film</p>
+    </div>
+  </div>
+
+  <div class="docu-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center reveal">
+          <h2 class="section-title">The Story</h2>
+          <p style="font-size: 1.2rem; line-height: 1.8;">
+            BLIKVELD is a Documentary Short Film that dives into the struggles and daily lives of several young
+            individuals. They live in an area called "De Westelijke Mijnstreek" located in Limburg, The Netherlands
+            which is notorious for high crime rates, and youth problems. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="docu-section" style="background-color: #0a0a0a;">
+    <div class="container">
+      <h2 class="section-title reveal">Watch Now</h2>
+
+      <div class="row">
+        <div class="col-md-6 reveal">
+          <div class="video-card">
+            <div class="iframe-wrapper">
+              <iframe src="https://www.youtube.com/embed/9GgFJyE18zM?si=zuSVpvj5756zBF96" allowfullscreen></iframe>
+            </div>
+            <div class="video-label">Originele Versie (OV)</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 reveal">
+          <div class="video-card">
+            <div class="iframe-wrapper">
+              <iframe src="https://www.youtube.com/embed/Z4Ecm_Cqjzc?si=ndKV0nIWQn9mGQhg" allowfullscreen></iframe>
+            </div>
+            <div class="video-label">English Subtitles</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="docu-section">
+    <div class="container">
+      <h2 class="section-title reveal">Behind The Scenes</h2>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="bts-item">
+            <img src="/img/projects/blikveld/theplace_bts.jpeg" class="bts-img" alt="Joey Headset">
+            <div class="bts-overlay">
+              <h4 style="margin:0; color:#FFE600 !important">Interview</h4>
+              <p style="color:white !important">Setup for interview at "The Place"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="bts-item">
+            <img src="/img/projects/blikveld/cce_bts.jpg" class="bts-img" alt="Inner">
+            <div class="bts-overlay">
+              <h4 style="margin:0; color:#FFE600 !important">B-Roll</h4>
+              <p style="color:white !important">Recording of additional abstract footage</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 reveal">
+          <div class="bts-item">
+            <img src="/img/projects/blikveld/boa_bts.webp" class="bts-img" alt="Camera Setup">
+            <div class="bts-overlay">
+              <h4 style="margin:0; color:#FFE600 !important">Selfie!</h4>
+              <p style="color:white !important">Cooperation with local youth enforcement</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="footer-cta reveal">
+    <div class="container">
+      <h1 style="font-size: 4rem; margin: 0; color: #000 !important;">EVERYONE HAS A STORY</h1>
+      <p style="margin-top: 20px; font-weight: bold; color: #000 !important;">Want to work together on a future project like this?</p>
+
+      <div style="margin-top: 30px;">
+        <img src="/img/logo/WHITE-jvdl-logo.svg" style="width: 100px; height: auto; filter: invert(1);" alt="Logo">
+        <br>
+        <a href="tel:+31612345678"
+          style="font-size: 1.5rem; font-weight: 700; color: #000 !important; display:block; margin-top:10px;">+31 6
+          1551 0621</a>
+        <a href="/contact.html" class="cta-btn">Contact</a>
+      </div>
+    </div>
+  </section>
+
+    <button id="back-to-top" title="Go to top">
+    ↑
+  </button>
+
+  <footer class="footer-container text-center"
+    style="background: #000; color: #555; padding: 20px 0; border-top: 1px solid #222;">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <p style="color: #666 !important;">© Joey van der Linden | All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Your existing nav function if needed
+      if (typeof navActivePage === 'function') { navActivePage(); }
+
+      // Scroll Reveal Animation
+      const reveals = document.querySelectorAll('.reveal');
+      const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+        const elementVisible = 100;
+        reveals.forEach((reveal) => {
+          const elementTop = reveal.getBoundingClientRect().top;
+          if (elementTop < windowHeight - elementVisible) {
+            reveal.classList.add('active');
+          }
+        });
+      };
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll(); // Trigger once on load
+    });
+  </script>
+
+    <script>
+    // Show/hide button
+    window.addEventListener("scroll", function () {
+      const button = document.getElementById("back-to-top");
+      if (window.scrollY > 400) {
+        button.style.display = "flex";
+      } else {
+        button.style.display = "none";
+      }
+    });
+
+    // Scroll to top
+    document.getElementById("back-to-top").addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+  <script type="text/javascript" src="/main.70a66962.js"></script>
+</body>
+
+</html>
