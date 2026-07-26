@@ -57,16 +57,16 @@
   </div>
 
   <!-- Navigation Header -->
-  <header class="fixed top-6 inset-x-0 z-40 transition-all duration-300 px-4 md:px-12">
-    <div class="max-w-7xl mx-auto bg-white/70 backdrop-blur-lg border border-modular-border rounded-full py-4 px-6 md:px-10 flex items-center justify-between shadow-sm">
-      <!-- Logo with Green Background and WHITE SVG Logo -->
-      <a href="#/" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 border-2 border-modular-dark rounded-xl flex items-center justify-center bg-modular-dark p-2 shadow-sm">
+  <header class="fixed top-3 sm:top-6 inset-x-2 sm:inset-x-0 z-40 transition-all duration-300 px-2 sm:px-6 md:px-12">
+    <div class="max-w-7xl mx-auto bg-white/80 backdrop-blur-lg border border-modular-border rounded-full py-2.5 px-4 sm:px-6 md:px-10 flex items-center justify-between shadow-sm">
+      <!-- Logo with Green Background -->
+      <a href="#/" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 border-2 border-modular-dark rounded-xl flex items-center justify-center bg-modular-dark p-1.5 shadow-sm flex-shrink-0">
           <img src="./img/logo/WHITE-jvdl-logo.svg" alt="Joey van der Linden Logo" class="w-full h-full object-contain">
         </div>
         <div class="hidden sm:block">
-          <span class="block text-sm font-bold tracking-tight uppercase group-hover:text-modular-muted transition-colors">Joey van der Linden</span>
-          <span class="block text-[10px] text-modular-muted uppercase tracking-widest -mt-1 font-semibold">Creative Producer</span>
+          <span class="block text-xs sm:text-sm font-bold tracking-tight uppercase group-hover:text-modular-muted transition-colors">Joey van der Linden</span>
+          <span class="block text-[9px] sm:text-[10px] text-modular-muted uppercase tracking-widest -mt-1 font-semibold">Creative Producer</span>
         </div>
       </a>
 
@@ -86,7 +86,6 @@
         </a>
       </nav>
 
-      <!-- Action Button / CTA -->
       <div class="hidden md:block">
         <a href="#/contact" class="inline-flex items-center gap-2 px-6 py-2.5 bg-modular-dark hover:bg-modular-darkHover text-white text-xs font-bold tracking-wider uppercase rounded-full shadow-sm hover:shadow transition-all duration-300">
           Let's Work <i class="fa-solid fa-arrow-right text-[10px]"></i>
@@ -94,24 +93,24 @@
       </div>
 
       <!-- Mobile Hamburger Button -->
-      <button id="menu-btn" class="md:hidden w-10 h-10 border border-modular-border rounded-full flex items-center justify-center text-modular-dark hover:bg-modular-dark/5 transition-all duration-300" aria-label="Toggle Menu">
-        <i class="fa-solid fa-bars text-lg transition-transform duration-300"></i>
+      <button id="menu-btn" class="md:hidden w-9 h-9 border border-modular-border rounded-full flex items-center justify-center text-modular-dark hover:bg-modular-dark/5 transition-all duration-300" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars text-base transition-transform duration-300"></i>
       </button>
     </div>
 
-    <!-- Mobile Drawer Overlay Menu Capsule -->
-    <div id="mobile-menu" class="hidden fixed top-24 inset-x-4 bg-white/95 backdrop-blur-xl border border-modular-border rounded-3xl z-30 transition-all duration-300 md:hidden shadow-lg">
-      <div class="px-6 py-8 flex flex-col gap-5">
-        <a href="#/" class="mobile-nav-link text-base uppercase tracking-wider font-bold border-b border-modular-border/50 pb-3 flex justify-between items-center" data-page="home">
+    <!-- Restored Mobile Drawer Overlay Menu Container -->
+    <div id="mobile-menu" class="hidden fixed top-20 inset-x-3 bg-white/95 backdrop-blur-xl border border-modular-border rounded-3xl z-30 transition-all duration-300 md:hidden shadow-xl">
+      <div class="px-6 py-6 flex flex-col gap-4">
+        <a href="#/" class="mobile-nav-link text-sm uppercase tracking-wider font-bold border-b border-modular-border/50 pb-3 flex justify-between items-center text-modular-dark" data-page="home">
           <span>Home</span> <span class="text-modular-muted text-xs">01</span>
         </a>
-        <a href="#/works" class="mobile-nav-link text-base uppercase tracking-wider font-bold border-b border-modular-border/50 pb-3 flex justify-between items-center" data-page="works">
+        <a href="#/works" class="mobile-nav-link text-sm uppercase tracking-wider font-bold border-b border-modular-border/50 pb-3 flex justify-between items-center text-modular-dark" data-page="works">
           <span>Works</span> <span class="text-modular-muted text-xs">02</span>
         </a>
-        <a href="#/about" class="mobile-nav-link text-base uppercase tracking-wider font-bold border-b border-modular-border/50 pb-3 flex justify-between items-center" data-page="about">
+        <a href="#/about" class="mobile-nav-link text-sm uppercase tracking-wider font-bold border-b border-modular-border/50 pb-3 flex justify-between items-center text-modular-dark" data-page="about">
           <span>About Me</span> <span class="text-modular-muted text-xs">03</span>
         </a>
-        <a href="#/contact" class="mobile-nav-link text-base uppercase tracking-wider font-bold pb-3 flex justify-between items-center" data-page="contact">
+        <a href="#/contact" class="mobile-nav-link text-sm uppercase tracking-wider font-bold pb-2 flex justify-between items-center text-modular-dark" data-page="contact">
           <span>Contact</span> <span class="text-modular-muted text-xs">04</span>
         </a>
       </div>
@@ -143,7 +142,8 @@
             Joey van der Linden
           </h1>
 
-          <div class="text-xl sm:text-3xl font-medium text-modular-muted mb-8 font-display h-12 flex items-center bg-white/60 backdrop-blur-md px-6 py-2 rounded-full border border-modular-border/40 shadow-xs">
+          <!-- Typewriter Box -->
+          <div class="text-base sm:text-2xl font-medium text-modular-muted mb-8 font-display min-h-[3rem] h-auto py-2.5 px-5 sm:px-6 flex flex-wrap items-center justify-center bg-white/70 backdrop-blur-md rounded-2xl sm:rounded-full border border-modular-border/40 shadow-xs text-center max-w-[90vw]">
             <span>Hello I'm,&nbsp;</span><span id="home-typewriter" class="text-modular-dark font-extrabold border-r-4 border-modular-dark pr-1.5"></span>
           </div>
 
@@ -478,11 +478,11 @@
 
     <!-- SECTION: WORKS PAGE -->
     <section id="page-works" class="page-view hidden">
-      <div class="max-w-7xl mx-auto px-6 py-16">
-        <div class="text-center mb-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
+        <div class="text-center mb-12 sm:mb-16">
           <span class="text-xs uppercase tracking-widest text-modular-muted font-bold">Archived Creations</span>
-          <h1 class="text-5xl sm:text-7xl font-display font-extrabold uppercase tracking-tight mt-2 mb-4 text-modular-dark">PORTFOLIO INDEX</h1>
-          <p class="text-modular-muted max-w-xl mx-auto text-sm leading-relaxed font-semibold">
+          <h1 class="text-3xl sm:text-6xl lg:text-7xl font-display font-extrabold uppercase tracking-tight mt-2 mb-4 text-modular-dark break-words">PORTFOLIO INDEX</h1>
+          <p class="text-modular-muted max-w-xl mx-auto text-xs sm:text-sm leading-relaxed font-semibold">
             Filter through our collection of visual projects. Click any block to reveal full dynamic parameters and production frameworks.
           </p>
         </div>
@@ -519,17 +519,17 @@
         </div>
 
         <!-- Introductory Card / Overthinking vs Doing -->
-        <div class="p-8 sm:p-12 rounded-[2.5rem] border border-modular-border bg-white/80 backdrop-blur-sm shadow-sm mb-20 reveal-item max-w-4xl mx-auto">
+        <div class="p-5 sm:p-12 rounded-[2rem] sm:rounded-[2.5rem] border border-modular-border bg-white/80 backdrop-blur-sm shadow-sm mb-16 sm:mb-20 reveal-item max-w-4xl mx-auto">
           <span class="text-xs font-bold text-modular-muted uppercase tracking-wider mb-2 block">It's all about perspective</span>
-          <h2 class="text-2xl sm:text-3xl font-display font-extrabold uppercase text-modular-dark mb-6">Introducing Yourself Is Weird.</h2>
-          <div class="text-modular-muted space-y-4 text-sm sm:text-base leading-relaxed font-semibold">
+          <h2 class="text-xl sm:text-3xl font-display font-extrabold uppercase text-modular-dark mb-4 sm:mb-6 break-words tracking-normal sm:tracking-wider">Introducing Yourself Is Weird.</h2>
+          <div class="text-modular-muted space-y-4 text-xs sm:text-base leading-relaxed font-semibold">
             <p>
               You want to show your best work without sounding like you're showing off. You want to be honest about the things you're still figuring out without accidentally talking yourself down. You want people to believe you're capable, while secretly wondering whether you're making the right decisions yourself.
             </p>
             <p>
               Those thoughts live in my head more often than I'd like to admit.
             </p>
-            <blockquote class="border-l-4 border-modular-dark pl-4 py-2 my-4 italic text-modular-dark bg-modular-cream/60 rounded-r-2xl">
+            <blockquote class="border-l-4 border-modular-dark pl-3 sm:pl-4 py-2 my-4 italic text-modular-dark bg-modular-cream/60 rounded-r-2xl text-xs sm:text-sm">
               "Luckily, I've learned that most of those questions aren't answered by overthinking them—they're answered by doing. Building things. Meeting people. Trying something that sounds way too ambitious, and somehow figuring it out along the way."
             </blockquote>
             <p>
