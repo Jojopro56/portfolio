@@ -1,0 +1,248 @@
+/* ===================================================================
+STYLE SHEET: style.css
+Redesigned Studio Modular Warm Editorial Styling System
+=================================================================== */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #102E20;
+  border-radius: 9999px;
+  border: 3px solid #FAF6F0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4434;
+}
+
+body {
+  background-color: #FAF6F0;
+  color: #102E20;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Landing Section Fading Background Mask */
+.landing-bg-fade {
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+}
+
+/* Ambient Radial Shapes */
+.ambient-glow-1 {
+  background: radial-gradient(circle, rgba(203, 220, 247, 0.75) 0%, rgba(250, 246, 240, 0) 70%);
+  filter: blur(50px);
+  will-change: transform;
+}
+
+.ambient-glow-2 {
+  background: radial-gradient(circle, rgba(16, 46, 32, 0.09) 0%, rgba(250, 246, 240, 0) 70%);
+  filter: blur(60px);
+  will-change: transform;
+}
+
+.ambient-glow-3 {
+  background: radial-gradient(circle, rgba(203, 220, 247, 0.45) 0%, rgba(250, 246, 240, 0) 75%);
+  filter: blur(40px);
+  will-change: transform;
+}
+
+/* Button Styles */
+.btn-modular-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2rem;
+  background-color: #102E20;
+  color: #FAF6F0;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 2px solid #102E20;
+  border-radius: 9999px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 4px 4px 0px 0px rgba(16, 46, 32, 0.2);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-modular-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FAF6F0;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-modular-primary:hover {
+  color: #102E20;
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px 0px rgba(16, 46, 32, 0.35);
+}
+
+.btn-modular-primary:hover::before {
+  transform: translateY(0);
+}
+
+.btn-modular-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2rem;
+  background-color: #FFFFFF;
+  color: #102E20;
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: 2px solid #102E20;
+  border-radius: 9999px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 4px 4px 0px 0px rgba(16, 46, 32, 0.15);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-modular-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #102E20;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-modular-secondary:hover {
+  color: #FAF6F0;
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 0px 0px rgba(16, 46, 32, 0.25);
+}
+
+.btn-modular-secondary:hover::before {
+  transform: translateY(0);
+}
+
+/* Partner Logo Styles */
+.logo-img {
+  max-height: 48px;
+  width: auto;
+  filter: brightness(0) invert(0.9);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.logo-img:hover {
+  filter: brightness(0) invert(1);
+}
+
+.whitesvg {
+  filter: brightness(0) invert(1);
+}
+
+/* Testimonial Images */
+.testimonial-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 2px solid #E8E2D9;
+}
+
+/* Page Transitions */
+.page-view {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-view.active-page {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reveal Items */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nav Line */
+.nav-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #102E20;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link-active .nav-line::after,
+.nav-link:hover .nav-line::after {
+  width: 100%;
+}
+
+/* Infinite Scrolling Marquee Track - Always Continuous */
+@keyframes infiniteScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: infiniteScroll 35s linear infinite;
+}
+
+/* High-contrast pop styling for Hero Landing Title */
+.hero-title-pop {
+  color: #102E20;
+  /* Cream ambient halo & outline separation from B&W photo */
+  text-shadow: 
+    0 2px 20px rgba(250, 246, 240, 0.95),
+    0 0 35px rgba(255, 255, 255, 0.9),
+    0 1px 2px rgba(250, 246, 240, 0.8);
+  filter: drop-shadow(0px 10px 20px rgba(16, 46, 32, 0.2));
+}
+
+/* Subtle radial light backdrop to isolate hero typography */
+.hero-backdrop-glow {
+  background: radial-gradient(ellipse at center, rgba(250, 246, 240, 0.65) 0%, rgba(250, 246, 240, 0) 75%);
+}
+
+/* High-contrast gradient title without halos */
+.hero-gradient-title {
+  background: linear-gradient(135deg, #091C13 0%, #102E20 50%, #245E43 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.22));
+}

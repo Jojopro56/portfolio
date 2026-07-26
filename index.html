@@ -1,606 +1,838 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="description" name="description">
-  <meta name="google" content="notranslate" />
-  <meta content="Mashup templates have been developped by Orson.io team" name="author">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Joey van der Linden - Creative Producer, Videographer & Photographer Portfolio">
+  
+  <title>Joey van der Linden | Portfolio</title>
 
-  <!-- Disable tap highlight on IE -->
-  <meta name="msapplication-tap-highlight" content="no">
+  <!-- Google Fonts: DM Sans for body copy, Syne for bold headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="./img/logo/WHITE-jvdl-logo.svg">
-  <link href="./img/logo/WHITE-jvdl-logo.svg" rel="icon">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <title>Home</title>
-
-  <link href="./main.3f6952e4.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="minimal">
-  <div id="site-border-left"></div>
-  <div id="site-border-right"></div>
-  <div id="site-border-top"></div>
-  <div id="site-border-bottom"></div>
+<body class="relative min-h-screen overflow-x-hidden selection:bg-modular-dark selection:text-modular-cream">
 
-  <header>
-    <nav class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"
-          aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="./index.html" title="">01 : Home</a></li>
-            <li><a href="./works.html" title="">02 : Works</a></li>
-            <li><a href="./about.html" title="">03 : About me</a></li>
-            <li><a href="./contact.html" title="">04 : Contact</a></li>
-          </ul>
+  <!-- Ambient Background Glows -->
+  <div class="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
+    <div id="bg-glow-1" class="ambient-glow-1 absolute top-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full opacity-80"></div>
+    <div id="bg-glow-2" class="ambient-glow-2 absolute bottom-[-10%] left-[-15%] w-[70vw] h-[70vw] rounded-full opacity-60"></div>
+    <div id="bg-glow-3" class="ambient-glow-3 absolute top-[40%] left-[30%] w-[45vw] h-[45vw] rounded-full opacity-40"></div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="fixed top-6 inset-x-0 z-40 transition-all duration-300 px-4 md:px-12">
+    <div class="max-w-7xl mx-auto bg-white/70 backdrop-blur-lg border border-modular-border rounded-full py-4 px-6 md:px-10 flex items-center justify-between shadow-sm">
+      <!-- Logo with Green Background and WHITE SVG Logo -->
+      <a href="#/" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 border-2 border-modular-dark rounded-xl flex items-center justify-center bg-modular-dark p-2 shadow-sm">
+          <img src="./img/logo/WHITE-jvdl-logo.svg" alt="Joey van der Linden Logo" class="w-full h-full object-contain">
         </div>
+        <div class="hidden sm:block">
+          <span class="block text-sm font-bold tracking-tight uppercase group-hover:text-modular-muted transition-colors">Joey van der Linden</span>
+          <span class="block text-[10px] text-modular-muted uppercase tracking-widest -mt-1 font-semibold">Creative Producer</span>
+        </div>
+      </a>
+
+      <!-- Desktop Floating Nav Menu -->
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#/" class="nav-link py-1 relative text-sm tracking-wider uppercase font-bold text-modular-dark/70 hover:text-modular-dark transition-colors" data-page="home">
+          <span class="nav-line">Home</span>
+        </a>
+        <a href="#/works" class="nav-link py-1 relative text-sm tracking-wider uppercase font-bold text-modular-dark/70 hover:text-modular-dark transition-colors" data-page="works">
+          <span class="nav-line">Works</span>
+        </a>
+        <a href="#/about" class="nav-link py-1 relative text-sm tracking-wider uppercase font-bold text-modular-dark/70 hover:text-modular-dark transition-colors" data-page="about">
+          <span class="nav-line">About Me</span>
+        </a>
+        <a href="#/contact" class="nav-link py-1 relative text-sm tracking-wider uppercase font-bold text-modular-dark/70 hover:text-modular-dark transition-colors" data-page="contact">
+          <span class="nav-line">Contact</span>
+        </a>
+      </nav>
+
+      <!-- Action Button / CTA -->
+      <div class="hidden md:block">
+        <a href="#/contact" class="inline-flex items-center gap-2 px-6 py-2.5 bg-modular-dark hover:bg-modular-darkHover text-white text-xs font-bold tracking-wider uppercase rounded-full shadow-sm hover:shadow transition-all duration-300">
+          Let's Work <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
       </div>
-    </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="menu-btn" class="md:hidden w-10 h-10 border border-modular-border rounded-full flex items-center justify-center text-modular-dark hover:bg-modular-dark/5 transition-all duration-300" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars text-lg transition-transform duration-300"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Overlay Menu Capsule -->
+    <div id="mobile-menu" class="hidden fixed top-24 inset-x-4 bg-white/95 backdrop-blur-xl border border-modular-border rounded-3xl z-30 transition-all duration-300 md:hidden shadow-lg">
+      <div class="px-6 py-8 flex flex-col gap-5">
+        <a href="#/" class="mobile-nav-link text-base uppercase tracking-wider font-bold border-b border-modular-border/50 pb-3 flex justify-between items-center" data-page="home">
+          <span>Home</span> <span class="text-modular-muted text-xs">01</span>
+        </a>
+        <a href="#/works" class="mobile-nav-link text-base uppercase tracking-wider font-bold border-b border-modular-border/50 pb-3 flex justify-between items-center" data-page="works">
+          <span>Works</span> <span class="text-modular-muted text-xs">02</span>
+        </a>
+        <a href="#/about" class="mobile-nav-link text-base uppercase tracking-wider font-bold border-b border-modular-border/50 pb-3 flex justify-between items-center" data-page="about">
+          <span>About Me</span> <span class="text-modular-muted text-xs">03</span>
+        </a>
+        <a href="#/contact" class="mobile-nav-link text-base uppercase tracking-wider font-bold pb-3 flex justify-between items-center" data-page="contact">
+          <span>Contact</span> <span class="text-modular-muted text-xs">04</span>
+        </a>
+      </div>
+    </div>
   </header>
 
-  <div class="hero-full-container background-image-container white-text-container"
-    style="background-image: url('./img/home/vissen-seaworld-1.jpg')">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="hero-full-wrapper">
-            <div class="text-content index-phone">
-              <h1>Hello,<br>
-                <span id="typed-strings">
-                  <span>I'm Joey!</span>
-                  <span>Dutch 🇳🇱 Creator</span>
-                  <span>Creative Producer</span>
-                  <span>Photo Expert</span>
-                </span>
-                <span id="typed"></span>
-              </h1>
+  <!-- Page Route Content Wrapper -->
+  <main id="main-content" class="relative z-10 pt-32">
+    
+    <!-- ========================================== -->
+    <!-- SECTION: HOME PAGE                         -->
+    <!-- ========================================== -->
+    <section id="page-home" class="page-view">
+      
+      <!-- Home Hero Landing Section with Saturated Gradient Title -->
+      <div class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-12">
+        <!-- Landing Background Image -->
+        <div class="absolute inset-0 z-0 pointer-events-none">
+          <img src="./img/home/bg-landing.png" onerror="this.src='img/home/bg-landing.png'" alt="Joey van der Linden Landing Background" class="w-full h-full object-cover object-top landing-bg-fade">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center flex flex-col items-center">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-modular-border bg-white/90 backdrop-blur-sm" style="font-size: 10px; font-weight: bold; letter-spacing: 0.15em; text-transform: uppercase; color: #102E20; box-shadow: 0 1px 3px rgba(0,0,0,0.02)">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 block animate-ping"></span> Now Booking for 2026/2027
+          </span>
+
+          <!-- High-Contrast Gradient Title -->
+          <h1 class="hero-gradient-title text-6xl sm:text-8xl lg:text-[10rem] font-display font-extrabold uppercase tracking-tight leading-none my-4 relative">
+            Joey van der Linden
+          </h1>
+
+          <div class="text-xl sm:text-3xl font-medium text-modular-muted mb-8 font-display h-12 flex items-center bg-white/60 backdrop-blur-md px-6 py-2 rounded-full border border-modular-border/40 shadow-xs">
+            <span>Hello I'm,&nbsp;</span><span id="home-typewriter" class="text-modular-dark font-extrabold border-r-4 border-modular-dark pr-1.5"></span>
+          </div>
+
+          <p class="max-w-2xl text-base sm:text-lg text-modular-muted leading-relaxed mb-12 font-medium bg-white/60 backdrop-blur-md p-5 rounded-2xl border border-modular-border/40 shadow-xs">
+            "Half filmmaker, half designer, half problem solver. (Yes, that's three halves.)"
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <a href="#/works" class="px-8 py-4 bg-modular-dark hover:bg-modular-darkHover text-white text-sm uppercase tracking-widest font-bold rounded-full transition-all duration-300 shadow-md">
+              Explore Works <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+            </a>
+            <a href="#demo-reel" class="px-8 py-4 border border-modular-border bg-white/90 hover:bg-white text-modular-dark text-sm uppercase tracking-widest font-bold rounded-full transition-all duration-300 shadow-sm flex items-center gap-2">
+              Watch Demo Reel <i class="fa-solid fa-circle-play text-modular-dark text-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Demo Reel Panel -->
+      <div id="demo-reel" class="max-w-7xl mx-auto px-6 py-12 reveal-item">
+        <div class="relative w-full h-[320px] sm:h-[550px] rounded-3xl overflow-hidden border border-modular-border shadow-lg group">
+          <img src="img/home/thumbnail-demo.png" onerror="this.src='img/home/thumbnail-demo.png'" class="absolute inset-0 w-full h-full object-cover brightness-75 group-hover:scale-105 transition-transform duration-1000" alt="Demo Reel Backdrop">
+          <div class="absolute inset-0 bg-gradient-to-t from-modular-dark/40 via-transparent to-transparent"></div>
+          
+          <div class="absolute inset-0 flex flex-col items-center justify-center z-20">
+            <button onclick="openVideoPopup('youtube', 'w6AvLD3vF7A')" class="w-24 h-24 rounded-full bg-white hover:bg-modular-dark text-modular-dark hover:text-white flex items-center justify-center transition-all duration-300 shadow-xl cursor-pointer group-hover:scale-110" aria-label="Play Demo Reel">
+              <i class="fa-solid fa-play text-xl ml-1"></i>
+            </button>
+            <span class="mt-6 text-xs uppercase tracking-widest font-extrabold text-white bg-modular-dark/80 px-4 py-2 rounded-full backdrop-blur-sm">PLAY DEMO REEL • [1:42]</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic Featured Work Section (Shows top 3 newest projects) -->
+      <div class="bg-white/40 py-24 border-y border-modular-border">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+            <div>
+              <span class="text-xs uppercase tracking-widest text-modular-muted font-bold font-sans">Visual Catalog</span>
+              <h2 class="text-4xl sm:text-6xl font-display font-extrabold uppercase tracking-tight mt-2 text-modular-dark">RECENT WORK</h2>
+            </div>
+            <a href="#/works" class="group text-sm font-bold uppercase tracking-widest text-modular-dark hover:text-modular-muted transition-colors flex items-center gap-2">
+              See All Projects <i class="fa-solid fa-chevron-right group-hover:translate-x-1.5 transition-transform"></i>
+            </a>
+          </div>
+
+          <div id="home-works-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Dynamically populated from script -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills and Tools Section -->
+      <div class="max-w-7xl mx-auto px-6 py-28 reveal-item">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5">
+            <span class="text-xs uppercase tracking-widest text-modular-muted font-bold">Aesthetic Matrix</span>
+            <h2 class="text-4xl sm:text-6xl font-display font-extrabold uppercase tracking-tight mt-2 mb-6 text-modular-dark">SKILLS & TOOLS</h2>
+            <p class="text-modular-muted text-base leading-relaxed mb-6 font-medium">
+              We leverage professional camera packages with color grades tailored to modern design systems. Operational knowledge covers high-speed track capturing to architectural lighting dynamics.
+            </p>
+            
+            <div class="relative rounded-3xl overflow-hidden border border-modular-border bg-white shadow-md mb-8 group aspect-[4/3]">
+              <img src="./img/projects/HOLLOW/cast.jpg" onerror="this.src='./img/projects/HOLLOW/cast.jpg'" alt="Joey van der Linden - Skills and Tools" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700">
+              <div class="absolute inset-0 bg-gradient-to-t from-modular-dark/60 via-transparent to-transparent opacity-80"></div>
+              <span class="absolute bottom-4 left-4 text-xs font-bold uppercase tracking-widest text-white bg-modular-dark/80 px-3.5 py-1.5 rounded-full">Directing Talent</span>
+            </div>
+
+            <div class="p-6 rounded-2xl border border-modular-border bg-white flex items-center gap-4 shadow-sm">
+              <div class="w-12 h-12 rounded-xl bg-modular-blue/30 flex items-center justify-center text-modular-dark text-xl flex-shrink-0">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-modular-dark uppercase text-sm">Communication & Multimedia Design Graduate</h4>
+                <p class="text-xs text-modular-muted font-semibold">Bachelor of Science</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="p-8 rounded-3xl border border-modular-border bg-white hover:border-modular-dark/30 transition-all duration-300 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <i class="fa-solid fa-video text-2xl text-modular-dark"></i>
+                  <span class="text-xs font-bold text-modular-muted">90%</span>
+                </div>
+                <h3 class="font-display text-xl font-bold uppercase text-modular-dark mb-2">Videography</h3>
+                <p class="text-xs text-modular-muted leading-relaxed font-medium">High-end cinematography, lighting setups, live coverage, event reels, and short form documentary content.</p>
+              </div>
+              <div class="w-full bg-modular-cream rounded-full h-2 mt-6">
+                <div class="bg-modular-dark h-2 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="p-8 rounded-3xl border border-modular-border bg-white hover:border-modular-dark/30 transition-all duration-300 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <i class="fa-solid fa-sliders text-2xl text-modular-dark"></i>
+                  <span class="text-xs font-bold text-modular-muted">85%</span>
+                </div>
+                <h3 class="font-display text-xl font-bold uppercase text-modular-dark mb-2">Post Production</h3>
+                <p class="text-xs text-modular-muted leading-relaxed font-medium">Narrative assembly, pacing architecture, sound design styling, and premium color grading presets.</p>
+              </div>
+              <div class="w-full bg-modular-cream rounded-full h-2 mt-6">
+                <div class="bg-modular-dark h-2 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="p-8 rounded-3xl border border-modular-border bg-white hover:border-modular-dark/30 transition-all duration-300 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <i class="fa-solid fa-camera text-2xl text-modular-dark"></i>
+                  <span class="text-xs font-bold text-modular-muted">95%</span>
+                </div>
+                <h3 class="font-display text-xl font-bold uppercase text-modular-dark mb-2">Photography</h3>
+                <p class="text-xs text-modular-muted leading-relaxed font-medium">Automotive shoots, portraits, live sports coverage, high-speed ASML matchmaking event capturing.</p>
+              </div>
+              <div class="w-full bg-modular-cream rounded-full h-2 mt-6">
+                <div class="bg-modular-dark h-2 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <div class="p-8 rounded-3xl border border-modular-border bg-white hover:border-modular-dark/30 transition-all duration-300 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <i class="fa-solid fa-brain text-2xl text-modular-dark"></i>
+                  <span class="text-xs font-bold text-modular-muted">100%</span>
+                </div>
+                <h3 class="font-display text-xl font-bold uppercase text-modular-dark mb-2">Creative Strategy</h3>
+                <p class="text-xs text-modular-muted leading-relaxed font-medium">Concept formulation, deep brainstorming architecture, storyboarding development, and target audience testing.</p>
+              </div>
+              <div class="w-full bg-modular-cream rounded-full h-2 mt-6">
+                <div class="bg-modular-dark h-2 rounded-full" style="width: 100%"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <p class="container ignore-typing">"I make videos and photos that tell your story, because 'professional
-      overthinker' wasn’t a real job title. Or is it? Hmmm, I'll let you decide on that."
-    </p>
+      <!-- Partners Carousel Section -->
+      <div class="bg-modular-dark py-16 border-y border-modular-dark overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-8 text-center md:text-left">
+          <span class="text-xs uppercase tracking-widest text-modular-blue font-bold font-sans">Trusted Collaborators</span>
+          <h3 class="text-2xl font-display font-extrabold uppercase tracking-wider text-white mt-1">PARTNERS I'VE COLLABORATED WITH</h3>
+        </div>
 
-    <div class="container"><a class="ignore-typing-button" href="#video-container" title="">Discover More</a></div>
+        <div class="relative w-full">
+          <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-modular-dark to-transparent z-10 pointer-events-none"></div>
+          <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-modular-dark to-transparent z-10 pointer-events-none"></div>
 
-
-  </div>
-
-  <!-- Video section with background and popup -->
-  <div id="video-container" class="hero-full-container background-video-container white-text-container"
-    style="position: relative; overflow: hidden; height: 100vh;">
-
-    <!-- YouTube Background Video -->
-    <div id="player"
-      style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; pointer-events: none;">
-    </div>
-
-    <!-- Play button -->
-    <div id="play-overlay">
-      <div class="play-button-wrapper">
-        <button id="play-button" aria-label="Play video">
-          <svg viewBox="0 0 100 100" width="40" height="40">
-            <circle cx="50" cy="50" r="50" fill="white" />
-            <polygon points="40,30 70,50 40,70" fill="black" />
-          </svg>
-        </button>
-        <span class="play-label">Play Demo Reel</span>
-      </div>
-    </div>
-
-    <!-- Popup Overlay with video and close button -->
-    <div id="video-popup" class="hidden">
-      <button id="close-video" aria-label="Close video popup">&times;</button>
-      <div class="video-popup-content">
-        <iframe id="popup-iframe" data-src="https://www.youtube.com/embed/w6AvLD3vF7A?autoplay=1" frameborder="0"
-          allow="autoplay; encrypted-media" allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <!-- Mobile fallback image -->
-    <img id="fallback-image" src="./img/home/thumbnail-demo.png" alt="Fallback background image">
-  </div>
-
-  <style>
-    .noscroll {
-      overflow: hidden;
-      height: 100vh;
-    }
-
-    #video-popup {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.9);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-
-    #video-popup.fade-in {
-      animation: fadeInOverlay 0.6s ease forwards;
-      display: flex !important;
-    }
-
-    @keyframes fadeInOverlay {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    .video-popup-content {
-      position: relative;
-      width: 80%;
-      aspect-ratio: 16 / 9;
-    }
-
-    .video-popup-content iframe {
-      width: 100%;
-      height: 100%;
-    }
-
-    #close-video {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 3rem;
-      color: white;
-      background: none;
-      border: none;
-      cursor: pointer;
-      z-index: 10000;
-    }
-
-    #play-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 10;
-      text-align: center;
-    }
-
-    #play-button {
-      border: none;
-      cursor: pointer;
-    }
-
-    .play-label {
-      color: black;
-      display: block;
-      margin-top: 0.5em;
-      font-size: 1.2em;
-    }
-  </style>
-
-  <section id="about-overview" class="anchor-spacer about-overview-section">
-    <span id="about">&nbsp;</span>
-    <div class="container about-wrapper">
-      <div class="intro-label">
-        <p class="intro-text">Skillset</p>
-      </div>
-      <div class="overview-heading">
-        <h2 class="overview-title">Overview.</h2>
-      </div>
-      <div class="overview-content">
-        <div class="profile-column">
-          <div class="profile-image-wrapper">
-            <img src="./img/about/joey-forest-1.jpg" alt="Sunny Patel" class="profile-image" />
-          </div>
-          <div class="button-group">
-            <a href="./assets/documents/CV-Joey25.pdf" download class="btn-gradient resume-btn">
-              <span class="btn-label">Resume</span>
+          <div class="logo-track flex items-center gap-16 py-4">
+            <a href="https://hightechxl.com/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="whitesvg logo-img h-12 w-auto object-contain" src="./img/logo/htxl-logo.svg" alt="HTXL logo" />
             </a>
-            <a href="https://www.linkedin.com/in/joeyvdl/" target="_blank" rel="noopener noreferrer"
-              class="btn-gradient linkedin-btn">
-              <span class="btn-label">LinkedIn</span>
+            <a href="https://stadslabssittardgeleen.nl/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/stadslab-logo.png" alt="Stadslab logo" />
             </a>
-            <a href="https://www.youtube.com/@joeyvanderlinden" target="_blank" rel="noopener noreferrer"
-              class="btn-gradient github-btn">
-              <span class="btn-label">YouTube</span>
+            <a href="https://www.instagram.com/fiat_punto_fanatics/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/fpf-logo.svg" alt="FPF logo" />
+            </a>
+            <a href="https://www.burgernet.nl/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/burgernet-logo.png" alt="Burgernet logo" />
+            </a>
+            <a href="https://www.asml.com/en" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/asml-logo.svg" alt="ASML logo" />
+            </a>
+
+            <a href="https://hightechxl.com/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="whitesvg logo-img h-12 w-auto object-contain" src="./img/logo/htxl-logo.svg" alt="HTXL logo" />
+            </a>
+            <a href="https://stadslabssittardgeleen.nl/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/stadslab-logo.png" alt="Stadslab logo" />
+            </a>
+            <a href="https://www.instagram.com/fiat_punto_fanatics/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/fpf-logo.svg" alt="FPF logo" />
+            </a>
+            <a href="https://www.burgernet.nl/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/burgernet-logo.png" alt="Burgernet logo" />
+            </a>
+            <a href="https://www.asml.com/en" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/asml-logo.svg" alt="ASML logo" />
+            </a>
+
+            <a href="https://hightechxl.com/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="whitesvg logo-img h-12 w-auto object-contain" src="./img/logo/htxl-logo.svg" alt="HTXL logo" />
+            </a>
+            <a href="https://stadslabssittardgeleen.nl/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/stadslab-logo.png" alt="Stadslab logo" />
+            </a>
+            <a href="https://www.instagram.com/fiat_punto_fanatics/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/fpf-logo.svg" alt="FPF logo" />
+            </a>
+            <a href="https://www.burgernet.nl/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/burgernet-logo.png" alt="Burgernet logo" />
+            </a>
+            <a href="https://www.asml.com/en" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/asml-logo.svg" alt="ASML logo" />
+            </a>
+
+            <a href="https://hightechxl.com/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="whitesvg logo-img h-12 w-auto object-contain" src="./img/logo/htxl-logo.svg" alt="HTXL logo" />
+            </a>
+            <a href="https://stadslabssittardgeleen.nl/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/stadslab-logo.png" alt="Stadslab logo" />
+            </a>
+            <a href="https://www.instagram.com/fiat_punto_fanatics/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/fpf-logo.svg" alt="FPF logo" />
+            </a>
+            <a href="https://www.burgernet.nl/" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/burgernet-logo.png" alt="Burgernet logo" />
+            </a>
+            <a href="https://www.asml.com/en" target="_blank" rel="noopener" class="flex-shrink-0 transition-transform hover:scale-105">
+              <img class="logo-img h-12 w-auto object-contain" src="./img/logo/asml-logo.svg" alt="ASML logo" />
             </a>
           </div>
-
-        </div>
-        <div class="description-column">
-          <ul class="overview-list">
-            <li><span class="emoji">📸</span><span>I'm an audio-visual producer with over 3 years of experience in
-                photography.</span></li>
-            <li><span class="emoji">🎓</span><span>Full-time Communication and Multimedia Design student working towards
-                graduation to eventually join the media industry.</span></li>
-            <li><span class="emoji">🎬</span><span>I've worked on both low- and high-production-value projects, often
-                starting from deep and creative brainstorming sessions.</span></li>
-            <li><span class="emoji">🧰</span><span>Studio production, on-site live coverage, event reels, and much
-                more—I'm a jack-of-many-trades!</span></li>
-            <li><span class="emoji">🚀</span><span>I'm working towards my dream of producing something with major
-                societal impact, one
-                project at a time.</span></li>
-          </ul>
-
         </div>
       </div>
-    </div>
-  </section>
 
-  <section id="client-logos" class="anchor-spacer logo-carousel-section white-text-container">
-    <div class="container">
-      <h2 class="partners-title" id="remove-padding">Partners I've Collaborated With</h2>
-      <div class="logo-carousel">
-        <div class="logo-track">
-          <!-- Set 1 -->
-          <a href="https://hightechxl.com/" target="_blank" rel="noopener">
-            <img class="whitesvg logo-img" src="./img/logo/htxl-logo.svg" alt="HTXL logo" />
-          </a>
-          <a href="https://stadslabssittardgeleen.nl/" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/stadslab-logo.png" alt="Stadslab logo" />
-          </a>
-          <a href="https://www.instagram.com/fiat_punto_fanatics/" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/fpf-logo.svg" alt="FPF logo" />
-          </a>
-          <a href="https://www.burgernet.nl/" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/burgernet-logo.webimage" alt="Burgernet logo" />
-          </a>
-          <a href="https://www.asml.com/en" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/asml-logo.svg" alt="ASML logo" />
-          </a>
+      <!-- Silvery Media Showcase -->
+      <div class="relative py-28 overflow-hidden bg-white/30 border-b border-modular-border reveal-item">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+              <span class="text-xs uppercase tracking-widest text-modular-muted font-bold">Automotive Platform</span>
+              <h2 class="text-4xl sm:text-6xl font-display font-extrabold uppercase tracking-tight mt-2 mb-6 text-modular-dark">SILVERY MEDIA</h2>
+              <p class="text-modular-dark/80 text-lg leading-relaxed mb-6 font-medium">
+                Silvery Media is my personal automotive platform, a cinematic space curated to capture the aerodynamics, engineering, and visual elegance of high-performance vehicles.
+              </p>
+              <p class="text-modular-muted text-sm leading-relaxed mb-8 font-medium">
+                Every vehicle speaks a unique design language. Through custom, on-location cinematography and ultra-sharp stills, we translate mechanical engineering into aesthetic art.
+              </p>
+              
+              <div class="flex gap-4">
+                <a href="https://www.instagram.com/silvery_media/" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 bg-modular-dark text-white hover:bg-modular-blue hover:text-modular-dark transition-all duration-300 text-xs uppercase tracking-widest font-extrabold rounded-full flex items-center gap-2">
+                  Go to Instagram <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
 
-          <!-- Set 2 (duplicate for seamless loop) -->
-          <a href="https://hightechxl.com/" target="_blank" rel="noopener">
-            <img class="whitesvg logo-img" src="./img/logo/htxl-logo.svg" alt="HTXL logo" />
-          </a>
-          <a href="https://stadslabssittardgeleen.nl/" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/stadslab-logo.png" alt="Stadslab logo" />
-          </a>
-          <a href="https://www.instagram.com/fiat_punto_fanatics/" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/fpf-logo.svg" alt="FPF logo" />
-          </a>
-          <a href="https://www.burgernet.nl/" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/burgernet-logo.webimage" alt="Burgernet logo" />
-          </a>
-          <a href="https://www.asml.com/en" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/asml-logo.svg" alt="ASML logo" />
-          </a>
+            <div class="lg:col-span-5">
+              <a href="https://www.instagram.com/silvery_media/" target="_blank" rel="noopener noreferrer" class="block relative rounded-[3rem] overflow-hidden border border-modular-border bg-white p-4 shadow-md aspect-[4/3] group cursor-pointer">
+                <div class="absolute inset-0 bg-cover bg-center rounded-[2.5rem] m-4" style="background-image: url('img/projects/porschegt3rs/thumbCompressed-gt3rs.jpg')"></div>
+                <div class="absolute inset-4 rounded-[2.5rem] bg-modular-dark/40 transition-all duration-300 group-hover:bg-modular-dark/20"></div>
+                
+                <div class="absolute inset-4 rounded-[2.5rem] flex flex-col items-center justify-center p-6 text-center z-10">
+                  <div class="w-20 h-20 rounded-2xl bg-white text-modular-dark flex items-center justify-center p-3 mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <img src="./img/logo/silvery-logo.png" alt="Silvery Media Logo" class="w-full h-full object-contain">
+                  </div>
+                  <h4 class="font-display text-2xl uppercase tracking-wider text-white bg-modular-dark/90 px-6 py-2 rounded-full group-hover:bg-modular-dark transition-colors duration-300">Go to Instagram</h4>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-          <!-- Set 3 (duplicate for seamless loop) -->
-          <a href="https://hightechxl.com/" target="_blank" rel="noopener">
-            <img class="whitesvg logo-img" src="./img/logo/htxl-logo.svg" alt="HTXL logo" />
-          </a>
-          <a href="https://stadslabssittardgeleen.nl/" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/stadslab-logo.png" alt="Stadslab logo" />
-          </a>
-          <a href="https://www.instagram.com/fiat_punto_fanatics/" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/fpf-logo.svg" alt="FPF logo" />
-          </a>
-          <a href="https://www.burgernet.nl/" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/burgernet-logo.webimage" alt="Burgernet logo" />
-          </a>
-          <a href="https://www.asml.com/en" target="_blank" rel="noopener">
-            <img class="logo-img" src="./img/logo/asml-logo.svg" alt="ASML logo" />
-          </a>
+      <!-- Testimonials Section -->
+      <div class="max-w-7xl mx-auto px-6 py-28 reveal-item">
+        <div class="text-center mb-16">
+          <span class="text-xs uppercase tracking-widest text-modular-muted font-bold">Direct Client Reviews</span>
+          <h2 class="text-4xl sm:text-6xl font-display font-extrabold uppercase tracking-tight mt-2 text-modular-dark">TESTIMONIALS</h2>
         </div>
 
-  </section>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="testimonial p-8 rounded-3xl border border-modular-border bg-white shadow-sm hover:border-modular-dark/30 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="text-modular-blue text-4xl mb-6"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="testimonial-quote text-modular-muted text-sm leading-relaxed italic mb-8 font-medium">
+                "You pay attention to researching new techniques and you take on challenges. The quality level of your camera work and final product is good. You started on time and you actively seek contact and feedback from the teacher(s), that is strong self-management."
+              </p>
+            </div>
+            <div class="flex items-center gap-4 border-t border-modular-border/50 pt-4">
+              <img src="./img/home/janneke.jpg" onerror="this.src='https://placehold.co/150x150/FAF6F0/102E20?text=JR'" alt="Client 2" class="testimonial-img w-16 h-16 rounded-full object-cover border-2 border-modular-border shadow-sm flex-shrink-0">
+              <div>
+                <p class="testimonial-name font-bold text-modular-dark text-xs uppercase tracking-wider">
+                  Janneke Roijers<br><span class="testimonial-role text-[10px] text-modular-muted font-bold">Lecturer Audiovisual Design</span>
+                </p>
+              </div>
+            </div>
+          </div>
 
-  <section class="silvery-media-section">
-    <div class="hero-full-container background-video-container white-text-container">
+          <div class="testimonial p-8 rounded-3xl border border-modular-border bg-white shadow-sm hover:border-modular-dark/30 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="text-modular-blue text-4xl mb-6"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="testimonial-quote text-modular-muted text-sm leading-relaxed italic mb-8 font-medium">
+                "Joey works systematically and demonstrates the ability to plan his duties in a realistic and organized manner. He consistently meets set deadlines and, when faced with challenges, communicates proactively and in a timely fashion to manage expectations."
+              </p>
+            </div>
+            <div class="flex items-center gap-4 border-t border-modular-border/50 pt-4">
+              <img src="./img/home/christos.jpg" onerror="this.src='https://placehold.co/150x150/FAF6F0/102E20?text=CB'" alt="Client 1" class="testimonial-img w-16 h-16 rounded-full object-cover border-2 border-modular-border shadow-sm flex-shrink-0">
+              <div>
+                <p class="testimonial-name font-bold text-modular-dark text-xs uppercase tracking-wider">
+                  Christos Bousis<br><span class="testimonial-role text-[10px] text-modular-muted font-bold">Videographer at Hightechxl</span>
+                </p>
+              </div>
+            </div>
+          </div>
 
-      <div class="vimeo-background-wrapper">
-        <iframe
-          src="https://player.vimeo.com/video/1112895901?h=0945361f1f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&background=1"
-          frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
-          title="fpf-jubi-FINAL1">
-        </iframe>
+          <div class="testimonial p-8 rounded-3xl border border-modular-border bg-white shadow-sm hover:border-modular-dark/30 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="text-modular-blue text-4xl mb-6"><i class="fa-solid fa-quote-left"></i></div>
+              <p class="testimonial-quote text-modular-muted text-sm leading-relaxed italic mb-8 font-medium">
+                "You notice from everything you do that you don't 'just do this', but actually do it with heart and soul. You see things through your lens that others miss, the atmosphere, the love for cars. Every shoot with you is relaxed, spontaneous and above all cozy. You are not only a creative with skills, but also a nice guy with a passion for what you do!"
+              </p>
+            </div>
+            <div class="flex items-center gap-4 border-t border-modular-border/50 pt-4">
+              <img src="./img/home/michiel.png" onerror="this.src='https://placehold.co/150x150/FAF6F0/102E20?text=MV'" alt="Client 3" class="testimonial-img w-16 h-16 rounded-full object-cover border-2 border-modular-border shadow-sm flex-shrink-0">
+              <div>
+                <p class="testimonial-name font-bold text-modular-dark text-xs uppercase tracking-wider">
+                  Michiel Vriens<br><span class="testimonial-role text-[10px] text-modular-muted font-bold">Moderator Fiatpuntofanatics</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <script src="https://player.vimeo.com/api/player.js"></script>
 
-      <div class="video-overlay"></div>
-
-      <img id="fallback-image" src="./img/home/vissen-seaworld-1.jpg" alt="Fallback background image">
-
-      <div class="container silvery-media-container">
-        <div class="silvery-media-text">
-          <h2 class="silvery-media-title">Silvery Media</h2>
-          <p class="silvery-media-description">
-            Silvery Media is my personal automotive platform, a dedicated space where I showcase my passion
-            for capturing the beauty and essence of automobiles. Through my lens, I aim to highlight the unique design,
-            raw power, and intricate details that make each vehicle special, presenting them in a way that truly
-            resonates
-            with fellow car enthusiasts and art appreciators alike.
+      <!-- Call to Action Banner -->
+      <div class="bg-modular-dark text-white py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <h2 class="text-4xl sm:text-6xl font-display font-extrabold uppercase tracking-tight mb-4 text-white">READY TO WORK TOGETHER?</h2>
+          <p class="text-modular-blue max-w-xl mx-auto text-base sm:text-lg mb-8 font-bold">
+            Let's structure your story, animate your engineering, or direct your next narrative project.
           </p>
-
-          <a class="ignore-typing-button" href="https://silvery.myportfolio.com/" target="_blank"
-            rel="noopener noreferrer">Discover More</a>
-        </div>
-        <div class="silvery-media-image-wrapper">
-          <img src="./img/logo/silvery-logo.png" alt="Silvery Media Showcase" class="silvery-media-image">
+          <a href="#/contact" class="px-8 py-4 bg-white text-modular-dark hover:bg-modular-blue transition-all duration-300 text-sm uppercase tracking-widest font-extrabold rounded-full inline-block shadow-lg">
+            Start Project Dialogue <i class="fa-solid fa-comment-dots ml-2"></i>
+          </a>
         </div>
       </div>
 
-    </div>
-  </section>
+    </section>
 
-  <section id="testimonials" style="background-color: #000; color: #fff; padding: 60px 20px;">
-    <div class="testimonial-container">
+    <!-- SECTION: WORKS PAGE -->
+    <section id="page-works" class="page-view hidden">
+      <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+          <span class="text-xs uppercase tracking-widest text-modular-muted font-bold">Archived Creations</span>
+          <h1 class="text-5xl sm:text-7xl font-display font-extrabold uppercase tracking-tight mt-2 mb-4 text-modular-dark">PORTFOLIO INDEX</h1>
+          <p class="text-modular-muted max-w-xl mx-auto text-sm leading-relaxed font-semibold">
+            Filter through our collection of visual projects. Click any block to reveal full dynamic parameters and production frameworks.
+          </p>
+        </div>
 
-      <div class="testimonial">
-        <img src="./img/home/janneke.jpg" alt="Client 2" class="testimonial-img">
-        <p class="testimonial-quote">"You pay attention to researching new techniques and you take on challenges. The
-          quality level of your camera work and final product is good. You started on time and you actively seek contact and
-          feedback from the teacher(s), that is strong
-          self-management."</p>
-        <p class="testimonial-name">Janneke Roijers<br><span class="testimonial-role">Lecturer Audiovisual Design</span>
-        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <label class="text-xs uppercase tracking-widest font-sans text-modular-dark font-extrabold">Filter Framework:</label>
+          <div class="relative w-72">
+            <select id="works-filter" onchange="filterProjects(this.value)" class="w-full px-5 py-3 bg-white text-modular-dark rounded-full border border-modular-border focus:border-modular-dark focus:outline-none transition-all duration-300 appearance-none font-sans text-xs tracking-wider cursor-pointer font-bold shadow-sm">
+              <option value="ALL">ALL CATEGORIES</option>
+            </select>
+            <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-modular-dark">
+              <i class="fa-solid fa-chevron-down text-xs"></i>
+            </div>
+          </div>
+        </div>
+
+        <div id="works-grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Projects dynamically injected here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION: ABOUT ME PAGE                     -->
+    <!-- ========================================== -->
+    <section id="page-about" class="page-view hidden">
+      
+      <div class="max-w-7xl mx-auto px-6 py-20">
+        
+        <!-- About Header Title -->
+        <div class="text-center mb-16">
+          <span class="text-xs uppercase tracking-widest text-modular-muted font-bold">Hey so uhh... Who's</span>
+          <h1 class="text-5xl sm:text-7xl font-display font-extrabold uppercase tracking-tight mt-2 text-modular-dark">JOEY?</h1>
+        </div>
+
+        <!-- Introductory Card / Overthinking vs Doing -->
+        <div class="p-8 sm:p-12 rounded-[2.5rem] border border-modular-border bg-white/80 backdrop-blur-sm shadow-sm mb-20 reveal-item max-w-4xl mx-auto">
+          <span class="text-xs font-bold text-modular-muted uppercase tracking-wider mb-2 block">It's all about perspective</span>
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold uppercase text-modular-dark mb-6">Introducing Yourself Is Weird.</h2>
+          <div class="text-modular-muted space-y-4 text-sm sm:text-base leading-relaxed font-semibold">
+            <p>
+              You want to show your best work without sounding like you're showing off. You want to be honest about the things you're still figuring out without accidentally talking yourself down. You want people to believe you're capable, while secretly wondering whether you're making the right decisions yourself.
+            </p>
+            <p>
+              Those thoughts live in my head more often than I'd like to admit.
+            </p>
+            <blockquote class="border-l-4 border-modular-dark pl-4 py-2 my-4 italic text-modular-dark bg-modular-cream/60 rounded-r-2xl">
+              "Luckily, I've learned that most of those questions aren't answered by overthinking them—they're answered by doing. Building things. Meeting people. Trying something that sounds way too ambitious, and somehow figuring it out along the way."
+            </blockquote>
+            <p>
+              That's pretty much how I've approached my entire career so far.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 1: Who Is Joey? -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24 reveal-item">
+          <!-- Column: Image Frame -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative rounded-[3rem] overflow-hidden border border-modular-border aspect-[4/5] bg-white p-3 shadow-md">
+              <img id="about-img-1" src="img/about/about-1.jpg" onerror="this.src='https://placehold.co/600x750/FAF6F0/102E20?text=Joey+van+der+Linden'" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-[1s] rounded-[2.5rem]" alt="Joey van der Linden">
+            </div>
+          </div>
+
+          <!-- Column: Text -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            <span class="text-xs font-bold text-modular-muted uppercase tracking-wider mb-2">Origins & Curiosity</span>
+            <h2 class="text-2xl sm:text-4xl font-display font-extrabold uppercase tracking-wider mb-6 text-modular-dark">SO... WHO IS JOEY?</h2>
+            <div class="text-modular-muted space-y-6 text-sm sm:text-base leading-relaxed font-semibold">
+              <p>
+                I'm Joey van der Linden, a Dutch multimedia designer with an unhealthy curiosity for anything involving cameras, computers, design, or technology.
+              </p>
+              <p>
+                As a kid I wasn't the type who had one dream job. One week I wanted to become a filmmaker. The next week I was fascinated by websites. Then 3D graphics. Then programming. Then photography. Then drones. Instead of choosing one, I decided to chase all of them.
+              </p>
+              <p>
+                Growing up during a time where technology evolved almost every year probably didn't help. Every new tool opened another rabbit hole, and naturally I wanted to jump into every single one of them.
+              </p>
+              
+              <!-- Milestone Badge -->
+              <div class="p-5 rounded-2xl border border-modular-border bg-white flex items-center gap-4 shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-modular-blue/30 flex items-center justify-center text-modular-dark text-lg flex-shrink-0">
+                  <i class="fa-solid fa-award"></i>
+                </div>
+                <div>
+                  <span class="block text-xs font-extrabold text-modular-dark uppercase">October 26, 2023 Milestone</span>
+                  <p class="text-xs text-modular-muted font-medium">Received my propaedeutic certificate—the moment I realized I wasn't just "interested" in creative technology, but wanted to build a future around it.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: What Can I Actually Do? -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24 reveal-item">
+          <!-- Text Left -->
+          <div class="lg:col-span-7 lg:order-1 order-2">
+            <span class="text-xs font-bold text-modular-muted uppercase tracking-wider mb-2">Capabilities & Skillset</span>
+            <h2 class="text-2xl sm:text-4xl font-display font-extrabold uppercase tracking-wider mb-6 text-modular-dark">WHAT CAN I ACTUALLY DO?</h2>
+            <div class="text-modular-muted space-y-6 text-sm sm:text-base leading-relaxed font-semibold">
+              <p>
+                Short answer? A little bit of everything.
+              </p>
+              <p>
+                Long answer? I've spent the last few years collecting creative skills like they're Pokémon. Photography. Filmmaking. Motion graphics. Graphic design. UX/UI. Project management. 3D scanning. Web development. Virtual Reality. Storytelling.
+              </p>
+              <p>
+                I never liked putting myself into a single box. Every project teaches something different, and surprisingly, all those different disciplines make each other stronger. Understanding design helps my filmmaking. Filmmaking improves my storytelling. Storytelling makes better websites. Everything connects.
+              </p>
+
+              <!-- Skill Pills Grid -->
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Photography</span>
+                <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Filmmaking</span>
+                <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Motion Graphics</span>
+                <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Graphic Design</span>
+                <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">UX / UI</span>
+                <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Project Management</span>
+                <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">3D Scanning</span>
+                <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Web Development</span>
+                <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Virtual Reality</span>
+                <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Storytelling</span>
+              </div>
+
+              <!-- Camera Milestone Card -->
+              <div class="p-6 rounded-2xl border border-modular-border bg-white shadow-sm mt-6">
+                <span class="text-xs font-extrabold text-modular-dark uppercase block mb-1">July 27, 2022 • The Spark</span>
+                <p class="text-xs text-modular-muted leading-relaxed font-medium">
+                  Bought my first DSLR camera—a Canon 7D. Looking back, buying that camera might have been one of the most expensive hobbies I've ever started... because it quickly turned into an obsession. Since then I've spent countless hours chasing good light, waiting for the perfect moment, editing until 2 AM, and occasionally laying on the ground just to get "the shot." Totally worth it.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Right -->
+          <div class="lg:col-span-5 lg:order-2 order-1 relative">
+            <div class="relative rounded-[3rem] overflow-hidden border border-modular-border aspect-[4/5] bg-white p-3 shadow-md">
+              <img id="about-img-2" src="img/about/joey-studio.jpg" onerror="this.src='https://placehold.co/600x750/FAF6F0/102E20?text=Joey+On+Set'" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-[1s] rounded-[2.5rem]" alt="Joey shooting on set">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: What Drives Me? & The Future (With Personal Portrait) -->
+        <div class="bg-modular-dark text-white rounded-[3rem] p-8 sm:p-14 relative overflow-hidden shadow-xl reveal-item">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+            
+            <!-- Column 1: Vision, Text & CTA -->
+            <div class="lg:col-span-7 space-y-6 text-left">
+              <div>
+                <span class="text-xs uppercase tracking-widest text-modular-blue font-bold font-sans">Purpose & Vision</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-extrabold uppercase text-white mt-1">WHAT DRIVES ME?</h2>
+              </div>
+
+              <p class="text-modular-blue text-base sm:text-lg leading-relaxed font-medium">
+                I care about making things that matter. Sure, creating something that looks beautiful is satisfying. But creating something that changes how people think, feel, or behave—that's the exciting part.
+              </p>
+
+              <p class="text-white/80 text-xs sm:text-sm leading-relaxed font-medium">
+                Whether that's a documentary that gives someone a new perspective, an interactive experience that teaches people something without them realizing it, or a commercial that people actually remember instead of skipping... That's the kind of work I want to make.
+              </p>
+
+              <div class="py-5 border-y border-white/10">
+                <h3 class="font-display text-xl sm:text-2xl uppercase tracking-wider text-white">The Dream</h3>
+                <p class="text-sm italic text-modular-blue mt-1 font-semibold">
+                  "To build media that leaves a lasting impression long after the screen turns black."
+                </p>
+              </div>
+
+              <div class="space-y-2 pt-2">
+                <h4 class="text-lg font-display uppercase text-white">The Future</h4>
+                <p class="text-xs sm:text-sm text-white/70 leading-relaxed font-medium">
+                  I'm still figuring things out. Honestly, I hope I never completely stop. Every project introduces me to new people, new ideas, and new opportunities I couldn't have predicted beforehand. That's exactly what makes this industry so exciting.
+                </p>
+              </div>
+
+              <div class="pt-4">
+                <p class="text-xs uppercase tracking-widest text-modular-blue font-extrabold mb-3">First of all, thanks. Second...</p>
+                <a href="#/contact" class="px-8 py-4 bg-white text-modular-dark hover:bg-modular-blue transition-all duration-300 text-xs uppercase tracking-widest font-extrabold rounded-full inline-flex items-center gap-2 shadow-lg">
+                  Maybe We're Supposed To Build Something Together <i class="fa-solid fa-arrow-right text-xs ml-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Column 2: Personal Portrait Card -->
+            <div class="lg:col-span-5 relative">
+              <div class="relative rounded-[2.5rem] overflow-hidden border border-white/20 aspect-[4/5] bg-white/5 p-3 shadow-2xl">
+                <!-- Replace path below with your exact portrait image path when ready -->
+                <img src="./img/projects/HOLLOW/award-overall.png" onerror="this.src='https://placehold.co/600x750/102E20/FAF6F0?text=Joey+Portrait'" class="w-full h-full object-cover rounded-[2rem] filter grayscale hover:grayscale-0 transition-all duration-700" alt="Joey van der Linden Personal Portrait">
+                
+                <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-modular-dark/80 backdrop-blur-md border border-white/10 text-center">
+                  <span class="text-[10px] uppercase font-bold tracking-widest text-modular-blue block">2026 NWMSU Short Film</span>
+                  <span class="text-xs font-bold text-white uppercase">Best Cinematography & Best Lighting Award</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
 
-      <div class="testimonial">
-        <img src="./img/home/christos.jpg" alt="Client 1" class="testimonial-img">
-        <p class="testimonial-quote">"Joey works systematically and demonstrates the ability to plan his duties in a
-          realistic and organized
-          manner. He consistently meets set deadlines and, when faced with challenges, communicates proactively
-          and in a timely fashion to manage expectations."</p>
-        <p class="testimonial-name">Christos Bousis<br><span class="testimonial-role">Videographer at Hightechxl</span>
-        </p>
+    </section>
+
+    <!-- SECTION: CONTACT PAGE -->
+    <section id="page-contact" class="page-view hidden">
+      <div class="max-w-7xl mx-auto px-6 py-20 relative">
+        <div class="absolute inset-0 z-0 pointer-events-none rounded-3xl overflow-hidden">
+          <canvas id="contact-canvas" class="w-full h-full opacity-40"></canvas>
+        </div>
+
+        <div class="text-center mb-16 relative z-10">
+          <span class="text-xs uppercase tracking-widest text-modular-muted font-bold">Let's Frame Your Idea</span>
+          <h1 class="text-5xl sm:text-7xl font-display font-extrabold uppercase tracking-tight mt-2 mb-4 text-modular-dark">LET'S TALK</h1>
+          <p class="text-modular-muted max-w-xl mx-auto text-sm leading-relaxed font-semibold">
+            Have a project, automotive request, or video concept in mind? Initiate the terminal prompt to fill details instantly, or complete the standard contact card below.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+          <div class="lg:col-span-5">
+            <div class="rounded-3xl border border-modular-border bg-white shadow-lg overflow-hidden">
+              <div class="px-5 py-4 bg-modular-dark border-b border-modular-border flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-rose-400 block"></span>
+                  <span class="w-3 h-3 rounded-full bg-amber-400 block"></span>
+                  <span class="w-3 h-3 rounded-full bg-emerald-400 block"></span>
+                </div>
+                <span class="text-[10px] font-sans font-bold tracking-widest text-white/70 uppercase">JOEY_ASSISTANT_V3.0</span>
+              </div>
+
+              <div class="p-6 font-sans text-xs space-y-4 min-h-[380px] flex flex-col justify-between">
+                <div id="terminal-screen" class="space-y-3 h-[260px] overflow-y-auto">
+                  <div class="text-modular-dark font-bold">SYSTEM: Diagnostic compile complete...</div>
+                  <div class="text-modular-muted">Hi, I'm Joey's automated assistant interface. Choose an option to generate a custom-filled message.</div>
+                </div>
+
+                <div id="terminal-options" class="flex flex-col gap-2">
+                  <button onclick="assistantOption('AUTOMOTIVE')" class="w-full py-2.5 px-4 border border-modular-border rounded-full hover:border-modular-dark text-left text-modular-muted hover:text-modular-dark transition-colors bg-modular-cream font-bold">
+                    <span class="text-modular-dark font-extrabold">></span> Inquire: Automotive Session
+                  </button>
+                  <button onclick="assistantOption('VIDEO')" class="w-full py-2.5 px-4 border border-modular-border rounded-full hover:border-modular-dark text-left text-modular-muted hover:text-modular-dark transition-colors bg-modular-cream font-bold">
+                    <span class="text-modular-dark font-extrabold">></span> Inquire: Video Co-Production
+                  </button>
+                  <button onclick="assistantOption('GENERAL')" class="w-full py-2.5 px-4 border border-modular-border rounded-full hover:border-modular-dark text-left text-modular-muted hover:text-modular-dark transition-colors bg-modular-cream font-bold">
+                    <span class="text-modular-dark font-extrabold">></span> General Inquiry / Say Hello
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-5 rounded-2xl bg-white border border-modular-border flex items-center gap-3 shadow-sm">
+                <i class="fa-solid fa-envelope text-modular-dark text-lg"></i>
+                <div>
+                  <span class="block text-[10px] uppercase text-modular-muted font-bold">Email Directly</span>
+                  <a href="mailto:jrs.vdlinden@gmail.com" class="text-xs hover:text-modular-muted transition-colors font-bold text-modular-dark">jrs.vdlinden@gmail.com</a>
+                </div>
+              </div>
+              <div class="p-5 rounded-2xl bg-white border border-modular-border flex items-center gap-3 shadow-sm">
+                <i class="fa-solid fa-phone text-modular-dark text-lg"></i>
+                <div>
+                  <span class="block text-[10px] uppercase text-modular-muted font-bold">Direct Call</span>
+                  <a href="tel:+31615510621" class="text-xs hover:text-modular-muted transition-colors font-bold text-modular-dark">+31 6 15 51 06 21</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="p-8 rounded-3xl border border-modular-border bg-white shadow-lg">
+              <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label for="form-name" class="block text-xs uppercase tracking-widest text-modular-dark mb-2 font-bold font-sans">Name</label>
+                    <input type="text" id="form-name" name="name" required class="w-full px-5 py-3 bg-modular-cream rounded-full border border-modular-border focus:border-modular-dark focus:outline-none text-modular-dark transition-colors font-sans text-sm font-bold" placeholder="Your Name">
+                  </div>
+                  <div>
+                    <label for="form-email" class="block text-xs uppercase tracking-widest text-modular-dark mb-2 font-bold font-sans">Email</label>
+                    <input type="email" id="form-email" name="email" required class="w-full px-5 py-3 bg-modular-cream rounded-full border border-modular-border focus:border-modular-dark focus:outline-none text-modular-dark transition-colors font-sans text-sm font-bold" placeholder="Your Email">
+                  </div>
+                </div>
+
+                <div>
+                  <label for="form-subject" class="block text-xs uppercase tracking-widest text-modular-dark mb-2 font-bold font-sans">Subject</label>
+                  <input type="text" id="form-subject" name="subject" required class="w-full px-5 py-3 bg-modular-cream rounded-full border border-modular-border focus:border-modular-dark focus:outline-none text-modular-dark transition-colors font-sans text-sm font-bold" placeholder="What are we framing?">
+                </div>
+
+                <div>
+                  <label for="form-message" class="block text-xs uppercase tracking-widest text-modular-dark mb-2 font-bold font-sans">Message</label>
+                  <textarea id="form-message" name="message" required rows="6" class="w-full px-5 py-4 bg-modular-cream rounded-3xl border border-modular-border focus:border-modular-dark focus:outline-none text-modular-dark transition-colors font-sans text-sm resize-none font-bold" placeholder="Project deliverables, targeted location, budget brackets..."></textarea>
+                </div>
+
+                <button id="form-submit-btn" type="submit" class="w-full py-4 bg-modular-dark hover:bg-modular-darkHover text-white uppercase tracking-widest font-extrabold text-xs rounded-full transition-all duration-300 shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50">
+                  <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                </button>
+              </form>
+              
+              <div id="form-success-box" class="hidden mt-6 p-4 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 text-xs font-sans font-bold text-center flex items-center justify-center gap-2">
+                <i class="fa-solid fa-circle-check text-sm"></i> Message sent successfully! I'll get back to you soon.
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="testimonial">
-        <img src="./img/home/michiel.png" alt="Client 3" class="testimonial-img">
-        <p class="testimonial-quote">"You notice from everything you do that you don't 'just do this', but actually do
-          it with heart
-          and soul. You see things through your lens that others miss, the atmosphere, the love for cars. Every shoot
-          with you is relaxed, spontaneous and above all cozy. You are not only a creative with skills, but also a
-          nice guy with a passion for what you do!"</p>
-        <p class="testimonial-name">Michiel Vriens<br><span class="testimonial-role">Moderator Fiatpuntofanatics</span>
-        </p>
-      </div>
+    <!-- SECTION: UNIVERSAL PROJECT DETAILS -->
+    <section id="page-project-details" class="page-view hidden">
+      <div id="project-detail-outlet"></div>
+    </section>
 
+  </main>
+
+  <!-- Professional Video Modal Overlay with Black Transparent Backdrop and Click-Outside Exit -->
+  <div id="video-overlay" onclick="closeVideoPopup()" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 transition-all duration-300 opacity-0 pointer-events-none">
+    <button onclick="closeVideoPopup()" class="absolute top-6 right-6 text-white/80 hover:text-white text-3xl sm:text-4xl focus:outline-none cursor-pointer z-10 transition-transform hover:scale-110" aria-label="Close video player">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div id="video-modal-container" onclick="event.stopPropagation()" class="w-full max-w-5xl aspect-video rounded-3xl overflow-hidden border border-white/10 bg-black shadow-2xl transition-all duration-300 scale-95 opacity-0">
+      <iframe id="video-iframe" class="w-full h-full" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
-  </section>
+  </div>
 
+  <!-- Global Image Lightbox Container -->
+  <div id="image-lightbox" class="hidden fixed inset-0 z-50 bg-modular-dark/95 backdrop-blur-md flex flex-col items-center justify-center p-6" onclick="closeImageLightbox()">
+    <button class="absolute top-6 right-6 text-white hover:text-modular-blue text-4xl focus:outline-none cursor-pointer">
+      <i class="fa-solid fa-times"></i>
+    </button>
+    <img id="lightbox-img" class="max-w-full max-h-[80vh] rounded-3xl border border-modular-border object-contain shadow-2xl p-2 bg-white" src="" alt="Lightbox Zoom View">
+    <span id="lightbox-caption" class="mt-6 text-sm font-bold text-modular-blue uppercase tracking-widest text-center px-4 py-2 bg-modular-dark/80 rounded-full"></span>
+  </div>
 
-  <section id="cta-section" class="cta-section">
-    <div class="cta-content">
-      <h2 class="cta-title">Ready to make something incredible?</h2>
-      <p class="cta-subtitle">Feel free to contact me so I can help you visualize your story</p>
-      <a href="./contact.html" class="cta-button">Contact</a>
-    </div>
-  </section>
-
-  <button id="back-to-top" title="Go to top">
-    ↑
+  <!-- Back to Top Trigger Button -->
+  <button id="back-to-top" onclick="scrollToTop()" class="fixed bottom-6 right-6 z-40 w-12 h-12 bg-white/95 border border-modular-border rounded-full flex items-center justify-center text-modular-dark hover:text-white hover:bg-modular-dark transition-all duration-300 shadow-lg opacity-0 translate-y-10 cursor-pointer">
+    <i class="fa-solid fa-arrow-up"></i>
   </button>
 
-  <!-- Progress Bar -->
-  <div class="scroll-progress">
-    <div class="progress-line"></div>
-    <ul class="progress-steps">
-      <li data-section="hero-full-container" data-label="Introduction"></li>
-      <li data-section="player" data-label="Demo Reel"></li>
-      <li data-section="about-overview-section" data-label="Skills"></li>
-      <li data-section="logo-carousel-section" data-label="Partners"></li>
-      <li data-section="silvery-media-section" data-label="Silvery Media"></li>
-      <li data-section="testimonials" data-label="Testimonials"></li>
-      <li data-section="cta-section" data-label="Contact"></li>
-    </ul>
-  </div>
-
-
-
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-links">
-        <a href="./index.html">01 : Home</a>
-        <a href="./works.html">02 : Works</a>
-        <a href="./about.html">03 : About me</a>
-        <a href="./contact.html">04 : Contact</a>
+  <!-- Global Page Footer -->
+  <footer class="bg-white border-t border-modular-border py-16 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="flex items-center gap-4">
+        <div class="w-10 h-10 border-2 border-modular-dark rounded-xl flex items-center justify-center bg-modular-dark p-2 shadow-sm">
+          <img src="./img/logo/WHITE-jvdl-logo.svg" alt="Joey van der Linden Logo" class="w-full h-full object-contain">
+        </div>
+        <div>
+          <span class="block text-sm font-bold uppercase tracking-wider text-modular-dark">Joey van der Linden</span>
+          <span class="block text-[10px] text-modular-muted uppercase tracking-widest font-bold">© 2026 | All Rights Reserved</span>
+        </div>
       </div>
-      <div class="footer-logo">
-        <img src="./img/logo/WHITE-jvdl-logo.svg" alt="Joey van der Linden Logo" />
+
+      <div class="flex items-center gap-6 md:gap-8 flex-wrap justify-center">
+        <a href="#/" class="text-xs uppercase tracking-widest font-extrabold text-modular-muted hover:text-modular-dark transition-colors">01 : Home</a>
+        <a href="#/works" class="text-xs uppercase tracking-widest font-extrabold text-modular-muted hover:text-modular-dark transition-colors">02 : Works</a>
+        <a href="#/about" class="text-xs uppercase tracking-widest font-extrabold text-modular-muted hover:text-modular-dark transition-colors">03 : About</a>
+        <a href="#/contact" class="text-xs uppercase tracking-widest font-extrabold text-modular-muted hover:text-modular-dark transition-colors">04 : Contact</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://www.facebook.com/jvdl.fb/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-modular-border flex items-center justify-center text-modular-muted hover:text-white hover:bg-modular-dark hover:border-modular-dark transition-all duration-300" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f text-sm"></i>
+        </a>
+        <a href="https://www.instagram.com/joeyvdl.ig/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-modular-border flex items-center justify-center text-modular-muted hover:text-white hover:bg-modular-dark hover:border-modular-dark transition-all duration-300" aria-label="Instagram">
+          <i class="fa-brands fa-instagram text-sm"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/joeyvdl/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-modular-border flex items-center justify-center text-modular-muted hover:text-white hover:bg-modular-dark hover:border-modular-dark transition-all duration-300" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in text-sm"></i>
+        </a>
+        <a href="https://www.youtube.com/@joeyvanderlinden" target="_blank" rel="noopener" class="w-10 h-10 rounded-full border border-modular-border flex items-center justify-center text-modular-muted hover:text-white hover:bg-modular-dark hover:border-modular-dark transition-all duration-300" aria-label="YouTube">
+          <i class="fa-brands fa-youtube text-sm"></i>
+        </a>
       </div>
     </div>
   </footer>
 
-
-
-
-
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = [
-        "hero-full-container",  // class
-        "player",               // id
-        "about-overview-section",
-        "logo-carousel-section",
-        "silvery-media-section",
-        "testimonials",         // id
-        "cta-section"
-      ];
-
-      const steps = document.querySelectorAll(".progress-steps li");
-
-      // Highlight correct step on scroll
-      function updateProgress() {
-        let currentIndex = -1;
-
-        sections.forEach((id, index) => {
-          const section =
-            document.querySelector("." + id) ||
-            document.getElementById(id);
-
-          if (section) {
-            const rect = section.getBoundingClientRect();
-            const sectionMid = rect.top + rect.height / 2;
-
-            if (sectionMid >= 0 && sectionMid <= window.innerHeight) {
-              currentIndex = index;
-            }
-          }
-        });
-
-        if (currentIndex === -1) {
-          // fallback: pick the first section in view
-          currentIndex = 0;
-        }
-
-        steps.forEach((step, index) => {
-          step.classList.toggle("active", index === currentIndex);
-        });
-      }
-
-      // Smooth scroll on click
-      steps.forEach((step, index) => {
-        step.addEventListener("click", () => {
-          const target =
-            document.querySelector("." + sections[index]) ||
-            document.getElementById(sections[index]);
-
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "center"
-            });
-          }
-        });
-      });
-
-
-      window.addEventListener("scroll", updateProgress);
-      updateProgress(); // run once on load
-    });
-  </script>
-
-
-
-
-
-  <!-- YouTube Player API -->
-  <script>
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        videoId: 'w6AvLD3vF7A',
-        playerVars: {
-          autoplay: 1,
-          controls: 0,
-          showinfo: 0,
-          modestbranding: 1,
-          loop: 1,
-          mute: 1,
-          rel: 0,
-          playlist: 'w6AvLD3vF7A'
-        },
-        events: {
-          onReady: function (e) {
-            e.target.mute();
-            e.target.playVideo();
-          }
-        }
-      });
-    }
-  </script>
-
-  <script>
-    // Show/hide button
-    window.addEventListener("scroll", function () {
-      const button = document.getElementById("back-to-top");
-      if (window.scrollY > 400) {
-        button.style.display = "flex";
-      } else {
-        button.style.display = "none";
-      }
-    });
-
-    // Scroll to top
-    document.getElementById("back-to-top").addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
-
-
-
-
-  <script>
-    const playButton = document.getElementById("play-button");
-    const closeButton = document.getElementById("close-video");
-    const popup = document.getElementById("video-popup");
-    const iframe = document.getElementById("popup-iframe");
-    const playOverlay = document.getElementById("play-overlay");
-    const progressBar = document.querySelector(".scroll-progress");
-
-    playButton.addEventListener("click", () => {
-      // Show video overlay
-      popup.classList.remove("hidden");
-      popup.classList.add("fade-in");
-      document.body.classList.add("noscroll");
-      playOverlay.style.display = "none";
-
-      // Disable progress bar
-      if (progressBar) {
-        progressBar.style.pointerEvents = "none"; // disable clicks
-        progressBar.style.opacity = "0.4"; // dim visually
-      }
-
-      // Set iframe src after fade-in completes
-      setTimeout(() => {
-        iframe.setAttribute("src", iframe.getAttribute("data-src"));
-      }, 600);
-    });
-
-    closeButton.addEventListener("click", () => {
-      // Hide video overlay
-      popup.classList.add("hidden");
-      popup.classList.remove("fade-in");
-      document.body.classList.remove("noscroll");
-      playOverlay.style.display = "block";
-
-      // Enable progress bar
-      if (progressBar) {
-        progressBar.style.pointerEvents = "auto"; // enable clicks
-        progressBar.style.opacity = "1"; // restore full opacity
-      }
-
-      // Stop video
-      iframe.setAttribute("src", "");
-    });
-  </script>
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function (event) {
-      type();
-      movingBackgroundImage();
-    });
-  </script>
-
-  <script type="text/javascript" src="./main.70a66962.js"></script>
+  <script src="code.js" defer></script>
 </body>
-
 
 </html>
