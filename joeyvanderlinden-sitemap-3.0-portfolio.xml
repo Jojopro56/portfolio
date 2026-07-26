@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Main Homepage -->
+  <url>
+    <loc>https://joeyvanderlinden.nl/</loc>
+    <lastmod>2026-07-26T18:03:09+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Key Portfolio & Profile Images for Google Image Search -->
+    <image:image>
+      <image:loc>https://joeyvanderlinden.nl/img/home/bg-landing.png</image:loc>
+      <image:title>Joey van der Linden - Creative Producer &amp; Visual Designer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://joeyvanderlinden.nl/img/about/about-1.jpg</image:loc>
+      <image:title>Joey van der Linden Portrait</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://joeyvanderlinden.nl/img/projects/porschegt3rs/thumbCompressed-gt3rs.jpg</image:loc>
+      <image:title>Porsche 992 GT3RS - Silvery Media</image:title>
+    </image:image>
+  </url>
+
+</urlset>
