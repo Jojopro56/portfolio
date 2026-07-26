@@ -6,19 +6,18 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://joeyvanderlinden.nl/</loc>
   <lastmod>2024-06-27T10:58:55+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://joeyvanderlinden.nl/about</loc>
+  <loc>https://joeyvanderlinden.nl/works</loc>
   <lastmod>2024-06-27T10:58:55+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://joeyvanderlinden.nl/portfolio</loc>
+  <loc>https://joeyvanderlinden.nl/about</loc>
   <lastmod>2024-06-27T10:58:55+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -27,6 +26,5 @@
   <lastmod>2024-06-27T10:58:55+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
 
 </urlset>
