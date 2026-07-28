@@ -46,7 +46,7 @@ const PROJECTS_DATABASE = [
     subtitle: "A private shoot for high-impact social media cataloging",
     thumbnail: "./img/projects/porschegt3rs/thumbCompressed-gt3rs.jpg",
     description: "A private shoot for social media content.",
-    longDescription: "Working closely with high-end sports car enthusiasts, this catalog shoot was executed under premium golden hour light on a racing track. Special care was given to highlight active aero parts, mechanical vents, and the premium lightweight carbon chassis, producing striking portfolio content.",
+    longDescription: "Working closely with high-end sports car enthusiasts, this catalog shoot was executed under golden hour light on a racing track. Special care was given to highlight active aero parts, mechanical vents, and the lightweight carbon chassis, producing striking portfolio content.",
     date: "2026-04",
     dateFormatted: "April 2026",
     deliverables: ["Automotive Photography", "Location Scouting", "Color Workflows"],
@@ -59,7 +59,7 @@ const PROJECTS_DATABASE = [
     title: "HOLLOW",
     subtitle: "An award winning music video project on drug use and its consequences",
     thumbnail: "./img/projects/HOLLOW/thumbHOLLOW.png",
-    description: "An award winning music video project on drug use and it's consequences.",
+    description: "An award winning music video project on drug use and its consequences.",
     longDescription: "Set to the haunting backdrop of 'Hollow' by Zachy, this music video is a raw, visual exploration of escapism and consequence. The film dives deep into a poignant question: What happens when someone tries to surgically remove their own emotions through substance abuse? Through deliberate lighting and visceral cinematography, the video physically manifests the feeling of emotional numbness and the chaotic, inevitable spiral that follows.\n\nConceived as a passion project specifically for the 2026 Northwest Missouri State University Film Festival, the entire video was brought to life in a demanding two-week window.",
     date: "2026-03",
     dateFormatted: "March 2026",
@@ -67,6 +67,17 @@ const PROJECTS_DATABASE = [
     client: "2026 NWMSU Film Festival",
     driveId: "1AnuXNHljabPF_WdoRClFuk__Ix2Ssvod",
     videoNotice: "This video contains copyrighted music and is hosted via Google Drive.",
+    awards: [
+      {
+        title: "Best Lighting",
+        description: "Recognized for outstanding use of color theory, dynamic stage lighting, and practical in-camera effects to shape the mood of the video."
+      },
+      {
+        title: "Best Overall Digital Cinematography Film",
+        description: "Awarded for exceptional camera movement, composition, and a cohesive visual language that elevated the music's narrative."
+      }
+    ],
+    awardImage: "./img/projects/HOLLOW/award-overall.png",
     btsImages: [
       "./img/projects/HOLLOW/lights.jpg",
       "./img/projects/HOLLOW/car.jpg",
@@ -84,7 +95,7 @@ const PROJECTS_DATABASE = [
     date: "2026-01",
     dateFormatted: "January 2026",
     deliverables: ["Directing", "Live Interviews", "Societal Engagement Strategy"],
-    client: "Dutch Cultural Fund",
+    client: "Stadslabs Sittard-Geleen",
     videos: [
       { title: "Originele Versie (OV)", youtubeId: "9GgFJyE18zM" },
       { title: "English Subtitles", youtubeId: "Z4Ecm_Cqjzc" }
@@ -106,7 +117,7 @@ const PROJECTS_DATABASE = [
     date: "2025-04",
     dateFormatted: "April 2025",
     deliverables: ["Creative Pacing", "Practical Effects", "Dolly Camera Work"],
-    client: "Agrarian Film Collective",
+    client: "Passion Project",
     youtubeId: "c6omRkkZbSk",
     btsImages: [
       "./img/projects/tired/kitchen.png",
@@ -124,7 +135,7 @@ const PROJECTS_DATABASE = [
     date: "2025-02",
     dateFormatted: "February 2025",
     deliverables: ["Product Photography", "Dynamic Framing", "Lighting Grids"],
-    client: "Private Collector",
+    client: "Silvery Media Showcase",
     externalUrl: "https://silvery.myportfolio.com/ford-mustang-gt"
   },
   {
@@ -134,7 +145,7 @@ const PROJECTS_DATABASE = [
     subtitle: "Sports hype action reel with focus tracking",
     thumbnail: "./img/projects/isaiah/Isaiah_thumb.png",
     description: "A basketball hype reel for Isaiah Crawford.",
-    longDescription: "This hype reel was part of a school assignment and required me to play with focus racking and manual focus. For this setup I used a Sony FX30 paired with a PDMovie Live Air wireless focus motor. At the end there's a (at the time) trending 'signature on lens' shot that I created with two magic arms and a clamp for the plexi glass to give the illusion that Isaiah is writing on the lens.",
+    longDescription: "This hype reel was part of a school assignment and required me to play with focus racking and manual focus. For this setup I used a Sony FX30 paired with a PDMovie Live Air wireless focus motor. At the end there's a trending 'signature on lens' shot created with magic arms and a clamp for plexi glass to give the illusion that Isaiah is writing directly on the lens.",
     date: "2025-02",
     dateFormatted: "February 2025",
     deliverables: ["Sports Editing", "Focus Racking", "Rhythm Syncing"],
@@ -156,7 +167,7 @@ const PROJECTS_DATABASE = [
     date: "2024-12",
     dateFormatted: "December 2024",
     deliverables: ["Video Explainer", "Content Creation", "Communication Strategy"],
-    client: "HighTechXL Program",
+    client: "HighTechXL",
     videos: [
       { title: "Part 1: Sign-Up", youtubeId: "Cq4frazBMpU" },
       { title: "Part 2: Pre-Program", youtubeId: "9RTRZPYlfKI" },
@@ -443,7 +454,7 @@ function renderHomeFeatured() {
       </div>
       <div class="p-6 flex-1 flex flex-col justify-between">
         <div>
-          <h3 class="font-display text-xl font-extrabold uppercase tracking-tight text-modular-dark mb-2 group-hover:text-modular-muted transition-colors duration-300">${proj.title}</h3>
+          <h3 class="font-display text-xl font-extrabold uppercase tracking-tight text-modular-dark mb-2 group-hover:text-modular-muted transition-colors duration-300 break-words">${proj.title}</h3>
           <p class="text-xs text-modular-muted line-clamp-3 leading-relaxed font-medium">${proj.description}</p>
         </div>
         <div class="flex items-center justify-between border-t border-modular-border/50 pt-4 mt-4">
@@ -495,23 +506,23 @@ function filterProjects(selectedCategory) {
   grid.innerHTML = filtered.map(proj => `
     <div class="group relative aspect-video rounded-3xl overflow-hidden border border-modular-border bg-white cursor-pointer shadow-sm hover:shadow-md reveal-item transition-all duration-300" onclick="window.location.hash='#/project/${proj.id}'">
       <img src="${proj.thumbnail}" onerror="this.src='https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=800'" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-95 group-hover:brightness-90" alt="${proj.title}">
-      <div class="absolute inset-0 bg-gradient-to-t from-modular-dark/80 via-modular-dark/20 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-modular-dark/90 via-modular-dark/30 to-transparent"></div>
       
-      <div class="absolute inset-0 p-6 flex flex-col justify-between">
+      <div class="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between">
         <div class="flex items-start justify-between">
-          <span class="px-4 py-1.5 text-[9px] font-sans font-extrabold uppercase tracking-widest text-modular-dark bg-white rounded-full shadow-sm">${proj.category}</span>
-          <span class="w-10 h-10 rounded-full bg-white text-modular-dark flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all shadow-md">
-            <i class="fa-solid fa-up-right-from-square text-[12px]"></i>
+          <span class="px-3.5 py-1 sm:px-4 sm:py-1.5 text-[8px] sm:text-[9px] font-sans font-extrabold uppercase tracking-widest text-modular-dark bg-white rounded-full shadow-sm">${proj.category}</span>
+          <span class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white text-modular-dark flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all shadow-md">
+            <i class="fa-solid fa-up-right-from-square text-[10px] sm:text-[12px]"></i>
           </span>
         </div>
         
         <div>
           <div class="flex items-center justify-between gap-2 mb-1">
-            <span class="text-[10px] font-bold text-white/80 uppercase tracking-wider">${proj.client}</span>
-            <span class="text-[10px] font-bold text-white/90 uppercase tracking-widest bg-white/20 backdrop-blur-sm px-2.5 py-0.5 rounded-full">${proj.dateFormatted}</span>
+            <span class="text-[9px] sm:text-[10px] font-bold text-white/80 uppercase tracking-wider truncate max-w-[60%]">${proj.client}</span>
+            <span class="text-[8px] sm:text-[10px] font-bold text-white/90 uppercase tracking-widest bg-white/20 backdrop-blur-sm px-2 py-0.5 rounded-full flex-shrink-0">${proj.dateFormatted}</span>
           </div>
-          <h3 class="text-2xl sm:text-4xl font-display font-extrabold uppercase tracking-wide text-white mb-2">${proj.title}</h3>
-          <p class="text-xs text-white/90 line-clamp-2 max-w-xl font-medium">${proj.description}</p>
+          <h3 class="text-xl sm:text-3xl lg:text-4xl font-display font-extrabold uppercase tracking-wide text-white mb-1.5 break-words line-clamp-1">${proj.title}</h3>
+          <p class="text-[11px] sm:text-xs text-white/90 line-clamp-2 max-w-xl font-medium">${proj.description}</p>
         </div>
       </div>
     </div>
@@ -541,6 +552,7 @@ function renderProjectDetails(projectId) {
   const hasExternalUrl = !!project.externalUrl;
   const hasBts = Array.isArray(project.btsImages) && project.btsImages.length > 0;
   const hasGallery = Array.isArray(project.galleryImages) && project.galleryImages.length > 0;
+  const hasAwards = Array.isArray(project.awards) && project.awards.length > 0;
 
   // Single or multiple video compilation build
   let videoMarkup = '';
@@ -622,7 +634,7 @@ function renderProjectDetails(projectId) {
       <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('${project.thumbnail}')"></div>
       <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
         <span class="px-4 py-1.5 rounded-full border border-modular-border bg-modular-cream text-modular-dark text-[10px] font-extrabold tracking-widest uppercase mb-6 inline-block">${project.category}</span>
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold uppercase tracking-tight mb-4 text-modular-dark">${project.title}</h1>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold uppercase tracking-tight mb-4 text-modular-dark break-words">${project.title}</h1>
         <p class="text-lg text-modular-muted max-w-2xl mx-auto font-medium leading-relaxed">${project.subtitle}</p>
       </div>
     </div>
@@ -658,6 +670,26 @@ function renderProjectDetails(projectId) {
           <p class="text-modular-muted text-base leading-relaxed mb-6 font-medium whitespace-pre-line">${project.longDescription}</p>
           <p class="text-modular-muted/80 text-sm leading-relaxed font-semibold">${project.description}</p>
           
+          ${hasAwards ? `
+            <div class="mt-12 p-8 rounded-3xl border border-modular-border bg-modular-dark text-white shadow-lg space-y-6">
+              <div class="flex flex-col sm:flex-row items-center gap-6 border-b border-white/10 pb-6">
+                ${project.awardImage ? `<img src="${project.awardImage}" alt="Award Laurels" class="h-20 w-auto object-contain flex-shrink-0">` : ''}
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-widest text-modular-blue">Film Festival Honors</span>
+                  <h4 class="text-2xl font-display font-extrabold uppercase mt-1">AWARDS & RECOGNITION</h4>
+                </div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+                ${project.awards.map(a => `
+                  <div>
+                    <h5 class="font-display text-lg font-bold uppercase text-modular-blue mb-2">${a.title}</h5>
+                    <p class="text-xs text-white/80 leading-relaxed font-medium">${a.description}</p>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
           ${hasExternalUrl ? `
             <div class="mt-12 p-8 rounded-3xl border border-modular-border bg-white shadow-sm flex flex-col items-start gap-4">
               <span class="px-4 py-1 text-[10px] uppercase font-bold tracking-widest text-modular-dark bg-modular-cream rounded-full border border-modular-border">External Showcase</span>
@@ -719,7 +751,7 @@ function renderProjectDetails(projectId) {
 }
 
 /**
- * GLOBAL LIGHTBOX AND ANIMATED VIDEO CONTROLLER (YouTube, Vimeo, Drive)
+ * GLOBAL LIGHTBOX AND ANIMATED VIDEO CONTROLLER
  */
 function openVideoPopup(type, embedId) {
   const overlay = document.getElementById('video-overlay');
@@ -727,7 +759,6 @@ function openVideoPopup(type, embedId) {
   const modalContainer = document.getElementById('video-modal-container');
   if (!overlay || !iframe) return;
 
-  // Fallback if only 1 argument is passed (e.g. openVideoPopup('w6AvLD3vF7A'))
   if (!embedId) {
     embedId = type;
     type = 'youtube';
@@ -868,17 +899,6 @@ function initContactCanvas() {
   resize();
   window.addEventListener('resize', resize);
 
-  let mouse = { x: null, y: null, radius: 120 };
-  canvas.parentElement.addEventListener('mousemove', (e) => {
-    const rect = canvas.getBoundingClientRect();
-    mouse.x = e.clientX - rect.left;
-    mouse.y = e.clientY - rect.top;
-  });
-  canvas.parentElement.addEventListener('mouseleave', () => {
-    mouse.x = null;
-    mouse.y = null;
-  });
-
   particles = [];
   for (let i = 0; i < particleCount; i++) {
     particles.push({
@@ -930,7 +950,7 @@ function initContactCanvas() {
 }
 
 /**
- * INTERACTIVE TERMINAL COMPILER
+ * INTERACTIVE TERMINAL COMPILER (With Mobile Auto-Scroll)
  */
 function assistantOption(type) {
   const screen = document.getElementById('terminal-screen');
@@ -968,10 +988,20 @@ function assistantOption(type) {
 
   document.getElementById('form-subject').value = subject;
   document.getElementById('form-message').value = bodyText;
+
+  // Mobile scroll directly to message form
+  if (window.innerWidth < 1024) {
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+      setTimeout(() => {
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+  }
 }
 
 /**
- * FORM DISPATCH REDIRECT (Direct Background Mailer)
+ * FORM DISPATCH REDIRECT
  */
 async function handleFormSubmit(event) {
   event.preventDefault();
@@ -984,7 +1014,6 @@ async function handleFormSubmit(event) {
   const subject = document.getElementById('form-subject').value;
   const message = document.getElementById('form-message').value;
 
-  // Show sending state
   submitBtn.disabled = true;
   submitBtn.innerHTML = `<span>Sending...</span> <i class="fa-solid fa-spinner animate-spin"></i>`;
 
@@ -1004,7 +1033,6 @@ async function handleFormSubmit(event) {
     });
 
     if (response.ok) {
-      // Reveal inline success confirmation
       successBox.classList.remove('hidden');
       document.getElementById('contact-form').reset();
       
@@ -1018,7 +1046,6 @@ async function handleFormSubmit(event) {
     console.error("Form dispatch error:", error);
     alert("Connection error. Please check your internet connection or email jrs.vdlinden@gmail.com directly.");
   } finally {
-    // Reset button state
     submitBtn.disabled = false;
     submitBtn.innerHTML = `<span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>`;
   }

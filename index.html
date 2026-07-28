@@ -125,9 +125,8 @@
     <!-- ========================================== -->
     <section id="page-home" class="page-view">
       
-      <!-- Home Hero Landing Section with Saturated Gradient Title -->
+      <!-- Home Hero Landing Section -->
       <div class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-12">
-        <!-- Landing Background Image -->
         <div class="absolute inset-0 z-0 pointer-events-none">
           <img src="./img/home/bg-landing.png" onerror="this.src='img/home/bg-landing.png'" alt="Joey van der Linden Landing Background" class="w-full h-full object-cover object-top landing-bg-fade">
         </div>
@@ -137,13 +136,12 @@
             <span class="w-2 h-2 rounded-full bg-emerald-600 block animate-ping"></span> Now Booking for 2026/2027
           </span>
 
-          <!-- High-Contrast Gradient Title -->
           <h1 class="hero-gradient-title text-6xl sm:text-8xl lg:text-[10rem] font-display font-extrabold uppercase tracking-tight leading-none my-4 relative">
             Joey van der Linden
           </h1>
 
-          <!-- Typewriter Box -->
-          <div class="text-base sm:text-2xl font-medium text-modular-muted mb-8 font-display min-h-[3rem] h-auto py-2.5 px-5 sm:px-6 flex flex-wrap items-center justify-center bg-white/70 backdrop-blur-md rounded-2xl sm:rounded-full border border-modular-border/40 shadow-xs text-center max-w-[90vw]">
+          <!-- Typewriter Box with fixed min height on mobile to stop layout jumps -->
+          <div class="text-base sm:text-2xl font-medium text-modular-muted mb-8 font-display min-h-[3.5rem] sm:min-h-[3rem] h-auto py-2.5 px-5 sm:px-6 flex flex-wrap items-center justify-center bg-white/70 backdrop-blur-md rounded-2xl sm:rounded-full border border-modular-border/40 shadow-xs text-center max-w-[90vw]">
             <span>Hello I'm,&nbsp;</span><span id="home-typewriter" class="text-modular-dark font-extrabold border-r-4 border-modular-dark pr-1.5"></span>
           </div>
 
@@ -155,9 +153,10 @@
             <a href="#/works" class="px-8 py-4 bg-modular-dark hover:bg-modular-darkHover text-white text-sm uppercase tracking-widest font-bold rounded-full transition-all duration-300 shadow-md">
               Explore Works <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
             </a>
-            <a href="#demo-reel" class="px-8 py-4 border border-modular-border bg-white/90 hover:bg-white text-modular-dark text-sm uppercase tracking-widest font-bold rounded-full transition-all duration-300 shadow-sm flex items-center gap-2">
+            <!-- Smooth scroll trigger without triggering router hash reload -->
+            <button onclick="document.getElementById('demo-reel').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-4 border border-modular-border bg-white/90 hover:bg-white text-modular-dark text-sm uppercase tracking-widest font-bold rounded-full transition-all duration-300 shadow-sm flex items-center gap-2 cursor-pointer">
               Watch Demo Reel <i class="fa-solid fa-circle-play text-modular-dark text-lg"></i>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -177,7 +176,7 @@
         </div>
       </div>
 
-      <!-- Dynamic Featured Work Section (Shows top 3 newest projects) -->
+      <!-- Dynamic Featured Work Section -->
       <div class="bg-white/40 py-24 border-y border-modular-border">
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -203,7 +202,7 @@
             <span class="text-xs uppercase tracking-widest text-modular-muted font-bold">Aesthetic Matrix</span>
             <h2 class="text-4xl sm:text-6xl font-display font-extrabold uppercase tracking-tight mt-2 mb-6 text-modular-dark">SKILLS & TOOLS</h2>
             <p class="text-modular-muted text-base leading-relaxed mb-6 font-medium">
-              We leverage professional camera packages with color grades tailored to modern design systems. Operational knowledge covers high-speed track capturing to architectural lighting dynamics.
+              I leverage professional camera packages with color grades tailored to modern design systems. Operational knowledge covers high-speed track capturing to architectural lighting dynamics.
             </p>
             
             <div class="relative rounded-3xl overflow-hidden border border-modular-border bg-white shadow-md mb-8 group aspect-[4/3]">
@@ -224,6 +223,22 @@
           </div>
 
           <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- Skill Card 1: Creative Strategy (First Position) -->
+            <div class="p-8 rounded-3xl border border-modular-border bg-white hover:border-modular-dark/30 transition-all duration-300 shadow-sm flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <i class="fa-solid fa-brain text-2xl text-modular-dark"></i>
+                  <span class="text-xs font-bold text-modular-muted">100%</span>
+                </div>
+                <h3 class="font-display text-xl font-bold uppercase text-modular-dark mb-2">Creative Strategy</h3>
+                <p class="text-xs text-modular-muted leading-relaxed font-medium">Concept formulation, deep brainstorming architecture, storyboarding development, and target audience testing.</p>
+              </div>
+              <div class="w-full bg-modular-cream rounded-full h-2 mt-6">
+                <div class="bg-modular-dark h-2 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <!-- Skill Card 2: Videography -->
             <div class="p-8 rounded-3xl border border-modular-border bg-white hover:border-modular-dark/30 transition-all duration-300 shadow-sm flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between mb-4">
@@ -238,6 +253,7 @@
               </div>
             </div>
 
+            <!-- Skill Card 3: Post-Production -->
             <div class="p-8 rounded-3xl border border-modular-border bg-white hover:border-modular-dark/30 transition-all duration-300 shadow-sm flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between mb-4">
@@ -252,6 +268,7 @@
               </div>
             </div>
 
+            <!-- Skill Card 4: Photography -->
             <div class="p-8 rounded-3xl border border-modular-border bg-white hover:border-modular-dark/30 transition-all duration-300 shadow-sm flex flex-col justify-between">
               <div>
                 <div class="flex items-center justify-between mb-4">
@@ -263,20 +280,6 @@
               </div>
               <div class="w-full bg-modular-cream rounded-full h-2 mt-6">
                 <div class="bg-modular-dark h-2 rounded-full" style="width: 95%"></div>
-              </div>
-            </div>
-
-            <div class="p-8 rounded-3xl border border-modular-border bg-white hover:border-modular-dark/30 transition-all duration-300 shadow-sm flex flex-col justify-between">
-              <div>
-                <div class="flex items-center justify-between mb-4">
-                  <i class="fa-solid fa-brain text-2xl text-modular-dark"></i>
-                  <span class="text-xs font-bold text-modular-muted">100%</span>
-                </div>
-                <h3 class="font-display text-xl font-bold uppercase text-modular-dark mb-2">Creative Strategy</h3>
-                <p class="text-xs text-modular-muted leading-relaxed font-medium">Concept formulation, deep brainstorming architecture, storyboarding development, and target audience testing.</p>
-              </div>
-              <div class="w-full bg-modular-cream rounded-full h-2 mt-6">
-                <div class="bg-modular-dark h-2 rounded-full" style="width: 100%"></div>
               </div>
             </div>
           </div>
@@ -373,7 +376,7 @@
                 Silvery Media is my personal automotive platform, a cinematic space curated to capture the aerodynamics, engineering, and visual elegance of high-performance vehicles.
               </p>
               <p class="text-modular-muted text-sm leading-relaxed mb-8 font-medium">
-                Every vehicle speaks a unique design language. Through custom, on-location cinematography and ultra-sharp stills, we translate mechanical engineering into aesthetic art.
+                Every vehicle speaks a unique design language. Through custom, on-location cinematography and ultra-sharp stills, I translate mechanical engineering into aesthetic art.
               </p>
               
               <div class="flex gap-4">
@@ -383,17 +386,10 @@
               </div>
             </div>
 
+            <!-- Clean image card without layered text/logo -->
             <div class="lg:col-span-5">
-              <a href="https://www.instagram.com/silvery_media/" target="_blank" rel="noopener noreferrer" class="block relative rounded-[3rem] overflow-hidden border border-modular-border bg-white p-4 shadow-md aspect-[4/3] group cursor-pointer">
-                <div class="absolute inset-0 bg-cover bg-center rounded-[2.5rem] m-4" style="background-image: url('img/projects/porschegt3rs/thumbCompressed-gt3rs.jpg')"></div>
-                <div class="absolute inset-4 rounded-[2.5rem] bg-modular-dark/40 transition-all duration-300 group-hover:bg-modular-dark/20"></div>
-                
-                <div class="absolute inset-4 rounded-[2.5rem] flex flex-col items-center justify-center p-6 text-center z-10">
-                  <div class="w-20 h-20 rounded-2xl bg-white text-modular-dark flex items-center justify-center p-3 mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <img src="./img/logo/silvery-logo.png" alt="Silvery Media Logo" class="w-full h-full object-contain">
-                  </div>
-                  <h4 class="font-display text-2xl uppercase tracking-wider text-white bg-modular-dark/90 px-6 py-2 rounded-full group-hover:bg-modular-dark transition-colors duration-300">Go to Instagram</h4>
-                </div>
+              <a href="https://www.instagram.com/p/DYa0vq2CBkj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="block relative rounded-[3rem] overflow-hidden border border-modular-border bg-white p-3 shadow-md aspect-[4/3] group cursor-pointer">
+                <img src="img/projects/porschegt3rs/thumbCompressed-gt3rs.jpg" alt="Porsche 992 GT3RS - Silvery Media" class="w-full h-full object-cover rounded-[2.5rem] group-hover:scale-105 transition-transform duration-700">
               </a>
             </div>
           </div>
@@ -481,9 +477,9 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div class="text-center mb-12 sm:mb-16">
           <span class="text-xs uppercase tracking-widest text-modular-muted font-bold">Archived Creations</span>
-          <h1 class="text-3xl sm:text-6xl lg:text-7xl font-display font-extrabold uppercase tracking-tight mt-2 mb-4 text-modular-dark break-words">PORTFOLIO INDEX</h1>
+          <h1 class="text-3xl sm:text-6xl lg:text-7xl font-display font-extrabold uppercase tracking-tight mt-2 mb-4 text-modular-dark">PORTFOLIO INDEX</h1>
           <p class="text-modular-muted max-w-xl mx-auto text-xs sm:text-sm leading-relaxed font-semibold">
-            Filter through our collection of visual projects. Click any block to reveal full dynamic parameters and production frameworks.
+            Filter through my collection of visual projects. Click any block to reveal full dynamic parameters and production frameworks.
           </p>
         </div>
 
@@ -505,23 +501,17 @@
       </div>
     </section>
 
-    <!-- ========================================== -->
-    <!-- SECTION: ABOUT ME PAGE                     -->
-    <!-- ========================================== -->
+    <!-- SECTION: ABOUT ME PAGE -->
     <section id="page-about" class="page-view hidden">
-      
       <div class="max-w-7xl mx-auto px-6 py-20">
-        
-        <!-- About Header Title -->
         <div class="text-center mb-16">
           <span class="text-xs uppercase tracking-widest text-modular-muted font-bold">Hey so uhh... Who's</span>
           <h1 class="text-5xl sm:text-7xl font-display font-extrabold uppercase tracking-tight mt-2 text-modular-dark">JOEY?</h1>
         </div>
 
-        <!-- Introductory Card / Overthinking vs Doing -->
         <div class="p-5 sm:p-12 rounded-[2rem] sm:rounded-[2.5rem] border border-modular-border bg-white/80 backdrop-blur-sm shadow-sm mb-16 sm:mb-20 reveal-item max-w-4xl mx-auto">
           <span class="text-xs font-bold text-modular-muted uppercase tracking-wider mb-2 block">It's all about perspective</span>
-          <h2 class="text-xl sm:text-3xl font-display font-extrabold uppercase text-modular-dark mb-4 sm:mb-6 break-words tracking-normal sm:tracking-wider">Introducing Yourself Is Weird.</h2>
+          <h2 class="text-xl sm:text-3xl font-display font-extrabold uppercase text-modular-dark mb-4 sm:mb-6 tracking-normal sm:tracking-wider">Introducing Yourself Is Weird.</h2>
           <div class="text-modular-muted space-y-4 text-xs sm:text-base leading-relaxed font-semibold">
             <p>
               You want to show your best work without sounding like you're showing off. You want to be honest about the things you're still figuring out without accidentally talking yourself down. You want people to believe you're capable, while secretly wondering whether you're making the right decisions yourself.
@@ -538,16 +528,13 @@
           </div>
         </div>
 
-        <!-- Section 1: Who Is Joey? -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24 reveal-item">
-          <!-- Column: Image Frame -->
           <div class="lg:col-span-5 relative">
             <div class="relative rounded-[3rem] overflow-hidden border border-modular-border aspect-[4/5] bg-white p-3 shadow-md">
               <img id="about-img-1" src="img/about/about-1.jpg" onerror="this.src='https://placehold.co/600x750/FAF6F0/102E20?text=Joey+van+der+Linden'" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-[1s] rounded-[2.5rem]" alt="Joey van der Linden">
             </div>
           </div>
 
-          <!-- Column: Text -->
           <div class="lg:col-span-7 flex flex-col justify-center">
             <span class="text-xs font-bold text-modular-muted uppercase tracking-wider mb-2">Origins & Curiosity</span>
             <h2 class="text-2xl sm:text-4xl font-display font-extrabold uppercase tracking-wider mb-6 text-modular-dark">SO... WHO IS JOEY?</h2>
@@ -562,7 +549,6 @@
                 Growing up during a time where technology evolved almost every year probably didn't help. Every new tool opened another rabbit hole, and naturally I wanted to jump into every single one of them.
               </p>
               
-              <!-- Milestone Badge -->
               <div class="p-5 rounded-2xl border border-modular-border bg-white flex items-center gap-4 shadow-sm">
                 <div class="w-10 h-10 rounded-xl bg-modular-blue/30 flex items-center justify-center text-modular-dark text-lg flex-shrink-0">
                   <i class="fa-solid fa-award"></i>
@@ -576,9 +562,7 @@
           </div>
         </div>
 
-        <!-- Section 2: What Can I Actually Do? -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24 reveal-item">
-          <!-- Text Left -->
           <div class="lg:col-span-7 lg:order-1 order-2">
             <span class="text-xs font-bold text-modular-muted uppercase tracking-wider mb-2">Capabilities & Skillset</span>
             <h2 class="text-2xl sm:text-4xl font-display font-extrabold uppercase tracking-wider mb-6 text-modular-dark">WHAT CAN I ACTUALLY DO?</h2>
@@ -593,7 +577,6 @@
                 I never liked putting myself into a single box. Every project teaches something different, and surprisingly, all those different disciplines make each other stronger. Understanding design helps my filmmaking. Filmmaking improves my storytelling. Storytelling makes better websites. Everything connects.
               </p>
 
-              <!-- Skill Pills Grid -->
               <div class="flex flex-wrap gap-2 pt-2">
                 <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Photography</span>
                 <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Filmmaking</span>
@@ -607,7 +590,6 @@
                 <span class="px-4 py-2 rounded-full border border-modular-border bg-white text-modular-dark text-xs font-bold uppercase shadow-xs">Storytelling</span>
               </div>
 
-              <!-- Camera Milestone Card -->
               <div class="p-6 rounded-2xl border border-modular-border bg-white shadow-sm mt-6">
                 <span class="text-xs font-extrabold text-modular-dark uppercase block mb-1">July 27, 2022 • The Spark</span>
                 <p class="text-xs text-modular-muted leading-relaxed font-medium">
@@ -617,7 +599,6 @@
             </div>
           </div>
 
-          <!-- Visual Right -->
           <div class="lg:col-span-5 lg:order-2 order-1 relative">
             <div class="relative rounded-[3rem] overflow-hidden border border-modular-border aspect-[4/5] bg-white p-3 shadow-md">
               <img id="about-img-2" src="img/about/joey-studio.jpg" onerror="this.src='https://placehold.co/600x750/FAF6F0/102E20?text=Joey+On+Set'" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-[1s] rounded-[2.5rem]" alt="Joey shooting on set">
@@ -625,11 +606,8 @@
           </div>
         </div>
 
-        <!-- Section 3: What Drives Me? & The Future (With Personal Portrait) -->
         <div class="bg-modular-dark text-white rounded-[3rem] p-8 sm:p-14 relative overflow-hidden shadow-xl reveal-item">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
-            
-            <!-- Column 1: Vision, Text & CTA -->
             <div class="lg:col-span-7 space-y-6 text-left">
               <div>
                 <span class="text-xs uppercase tracking-widest text-modular-blue font-bold font-sans">Purpose & Vision</span>
@@ -666,10 +644,8 @@
               </div>
             </div>
 
-            <!-- Column 2: Personal Portrait Card -->
             <div class="lg:col-span-5 relative">
               <div class="relative rounded-[2.5rem] overflow-hidden border border-white/20 aspect-[4/5] bg-white/5 p-3 shadow-2xl">
-                <!-- Replace path below with your exact portrait image path when ready -->
                 <img src="./img/projects/HOLLOW/award-overall.png" onerror="this.src='https://placehold.co/600x750/102E20/FAF6F0?text=Joey+Portrait'" class="w-full h-full object-cover rounded-[2rem] filter grayscale hover:grayscale-0 transition-all duration-700" alt="Joey van der Linden Personal Portrait">
                 
                 <div class="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-modular-dark/80 backdrop-blur-md border border-white/10 text-center">
@@ -678,7 +654,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -796,7 +771,7 @@
 
   </main>
 
-  <!-- Professional Video Modal Overlay with Black Transparent Backdrop and Click-Outside Exit -->
+  <!-- Video Modal Overlay -->
   <div id="video-overlay" onclick="closeVideoPopup()" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 transition-all duration-300 opacity-0 pointer-events-none">
     <button onclick="closeVideoPopup()" class="absolute top-6 right-6 text-white/80 hover:text-white text-3xl sm:text-4xl focus:outline-none cursor-pointer z-10 transition-transform hover:scale-110" aria-label="Close video player">
       <i class="fa-solid fa-xmark"></i>
@@ -806,7 +781,7 @@
     </div>
   </div>
 
-  <!-- Global Image Lightbox Container -->
+  <!-- Image Lightbox Container -->
   <div id="image-lightbox" class="hidden fixed inset-0 z-50 bg-modular-dark/95 backdrop-blur-md flex flex-col items-center justify-center p-6" onclick="closeImageLightbox()">
     <button class="absolute top-6 right-6 text-white hover:text-modular-blue text-4xl focus:outline-none cursor-pointer">
       <i class="fa-solid fa-times"></i>
@@ -815,12 +790,12 @@
     <span id="lightbox-caption" class="mt-6 text-sm font-bold text-modular-blue uppercase tracking-widest text-center px-4 py-2 bg-modular-dark/80 rounded-full"></span>
   </div>
 
-  <!-- Back to Top Trigger Button -->
+  <!-- Back to Top Button -->
   <button id="back-to-top" onclick="scrollToTop()" class="fixed bottom-6 right-6 z-40 w-12 h-12 bg-white/95 border border-modular-border rounded-full flex items-center justify-center text-modular-dark hover:text-white hover:bg-modular-dark transition-all duration-300 shadow-lg opacity-0 translate-y-10 cursor-pointer">
     <i class="fa-solid fa-arrow-up"></i>
   </button>
 
-  <!-- Global Page Footer -->
+  <!-- Page Footer -->
   <footer class="bg-white border-t border-modular-border py-16 relative z-10">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
       <div class="flex items-center gap-4">
