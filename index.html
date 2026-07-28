@@ -140,9 +140,9 @@
             Joey van der Linden
           </h1>
 
-          <!-- Typewriter Box with fixed min height on mobile to stop layout jumps -->
-          <div class="text-base sm:text-2xl font-medium text-modular-muted mb-8 font-display min-h-[3.5rem] sm:min-h-[3rem] h-auto py-2.5 px-5 sm:px-6 flex flex-wrap items-center justify-center bg-white/70 backdrop-blur-md rounded-2xl sm:rounded-full border border-modular-border/40 shadow-xs text-center max-w-[90vw]">
-            <span>Hello I'm,&nbsp;</span><span id="home-typewriter" class="text-modular-dark font-extrabold border-r-4 border-modular-dark pr-1.5"></span>
+          <!-- Typewriter Box: Fixed Height (h-14) Locks Layout Position Perfectly -->
+          <div class="text-xs sm:text-xl md:text-2xl font-medium text-modular-muted mb-8 font-display h-14 sm:h-14 px-4 sm:px-6 flex items-center justify-center bg-white/70 backdrop-blur-md rounded-full border border-modular-border/40 shadow-xs text-center max-w-[92vw] overflow-hidden">
+            <span class="flex-shrink-0">Hello I'm,&nbsp;</span><span id="home-typewriter" class="text-modular-dark font-extrabold border-r-4 border-modular-dark pr-1.5 whitespace-nowrap"></span>
           </div>
 
           <p class="max-w-2xl text-base sm:text-lg text-modular-muted leading-relaxed mb-12 font-medium bg-white/60 backdrop-blur-md p-5 rounded-2xl border border-modular-border/40 shadow-xs">
@@ -153,7 +153,6 @@
             <a href="#/works" class="px-8 py-4 bg-modular-dark hover:bg-modular-darkHover text-white text-sm uppercase tracking-widest font-bold rounded-full transition-all duration-300 shadow-md">
               Explore Works <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
             </a>
-            <!-- Smooth scroll trigger without triggering router hash reload -->
             <button onclick="document.getElementById('demo-reel').scrollIntoView({ behavior: 'smooth' })" class="px-8 py-4 border border-modular-border bg-white/90 hover:bg-white text-modular-dark text-sm uppercase tracking-widest font-bold rounded-full transition-all duration-300 shadow-sm flex items-center gap-2 cursor-pointer">
               Watch Demo Reel <i class="fa-solid fa-circle-play text-modular-dark text-lg"></i>
             </button>
@@ -386,9 +385,9 @@
               </div>
             </div>
 
-            <!-- Clean image card without layered text/logo -->
+            <!-- Clean image card -->
             <div class="lg:col-span-5">
-              <a href="https://www.instagram.com/p/DYa0vq2CBkj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="block relative rounded-[3rem] overflow-hidden border border-modular-border bg-white p-3 shadow-md aspect-[4/3] group cursor-pointer">
+              <a href="https://www.instagram.com/silvery_media/" target="_blank" rel="noopener noreferrer" class="block relative rounded-[3rem] overflow-hidden border border-modular-border bg-white p-3 shadow-md aspect-[4/3] group cursor-pointer">
                 <img src="img/projects/porschegt3rs/thumbCompressed-gt3rs.jpg" alt="Porsche 992 GT3RS - Silvery Media" class="w-full h-full object-cover rounded-[2.5rem] group-hover:scale-105 transition-transform duration-700">
               </a>
             </div>

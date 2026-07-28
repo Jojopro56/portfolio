@@ -460,7 +460,7 @@ function renderHomeFeatured() {
         <div class="flex items-center justify-between border-t border-modular-border/50 pt-4 mt-4">
           <span class="text-[10px] font-bold text-modular-muted uppercase">${proj.client}</span>
           <a href="#/project/${proj.id}" class="btn-modular-secondary text-xs !py-2.5 !px-5 !shadow-none hover:!shadow-sm">
-            View Frame <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            View Project <i class="fa-solid fa-arrow-right text-[10px]"></i>
           </a>
         </div>
       </div>
@@ -554,7 +554,6 @@ function renderProjectDetails(projectId) {
   const hasGallery = Array.isArray(project.galleryImages) && project.galleryImages.length > 0;
   const hasAwards = Array.isArray(project.awards) && project.awards.length > 0;
 
-  // Single or multiple video compilation build
   let videoMarkup = '';
 
   if (project.videos && project.videos.length > 0) {
@@ -671,17 +670,17 @@ function renderProjectDetails(projectId) {
           <p class="text-modular-muted/80 text-sm leading-relaxed font-semibold">${project.description}</p>
           
           ${hasAwards ? `
-            <div class="mt-12 p-8 rounded-3xl border border-modular-border bg-modular-dark text-white shadow-lg space-y-6">
-              <div class="flex flex-col sm:flex-row items-center gap-6 border-b border-white/10 pb-6">
-                ${project.awardImage ? `<img src="${project.awardImage}" alt="Award Laurels" class="h-20 w-auto object-contain flex-shrink-0">` : ''}
+            <div class="mt-12 p-8 sm:p-10 rounded-3xl border border-modular-border bg-modular-dark text-white shadow-xl space-y-8">
+              <div class="flex flex-col sm:flex-row items-center gap-6 border-b border-white/10 pb-6 text-center sm:text-left">
+                ${project.awardImage ? `<img src="${project.awardImage}" alt="Award Laurels" class="h-32 sm:h-44 w-auto object-contain flex-shrink-0 drop-shadow-md">` : ''}
                 <div>
                   <span class="text-[10px] font-bold uppercase tracking-widest text-modular-blue">Film Festival Honors</span>
-                  <h4 class="text-2xl font-display font-extrabold uppercase mt-1">AWARDS & RECOGNITION</h4>
+                  <h4 class="text-2xl sm:text-3xl font-display font-extrabold uppercase mt-1">AWARDS & RECOGNITION</h4>
                 </div>
               </div>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 ${project.awards.map(a => `
-                  <div>
+                  <div class="p-5 rounded-2xl bg-white/5 border border-white/10">
                     <h5 class="font-display text-lg font-bold uppercase text-modular-blue mb-2">${a.title}</h5>
                     <p class="text-xs text-white/80 leading-relaxed font-medium">${a.description}</p>
                   </div>
@@ -950,7 +949,7 @@ function initContactCanvas() {
 }
 
 /**
- * INTERACTIVE TERMINAL COMPILER (With Mobile Auto-Scroll)
+ * INTERACTIVE TERMINAL COMPILER
  */
 function assistantOption(type) {
   const screen = document.getElementById('terminal-screen');
@@ -989,7 +988,6 @@ function assistantOption(type) {
   document.getElementById('form-subject').value = subject;
   document.getElementById('form-message').value = bodyText;
 
-  // Mobile scroll directly to message form
   if (window.innerWidth < 1024) {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
