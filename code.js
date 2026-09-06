@@ -51,7 +51,7 @@ const PROJECTS_DATABASE = [
     dateFormatted: "April 2026",
     deliverables: ["Automotive Photography", "Location Scouting", "Color Workflows"],
     client: "Silvery Media Showcase",
-    externalUrl: "https://silvery.myportfolio.com/porsche-992-gt3rs"
+    externalUrl: "https://silverymedia.nl/"
   },
   {
     id: "hollow",
