@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Joey van der Linden - Creative Producer & Multimedia Designer">
+  
+  <title>Joey van der Linden | Links</title>
+
+  <!-- Google Fonts: DM Sans & Syne (Exact match with your portfolio) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./img/logo/WHITE-jvdl-logo.svg">
+
+  <!-- FontAwesome for the 3-dots icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'sans-serif'],
+            display: ['Syne', 'sans-serif'],
+          },
+          colors: {
+            modular: {
+              cream: '#FAF6F0',
+              dark: '#102E20',
+              darkHover: '#1d4434',
+              blue: '#CBDCF7',
+              border: '#E8E2D9',
+              muted: '#526D61',
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* 0.2s Snappy load-in entrance animation */
+    @keyframes linktreeEnter {
+      0% {
+        opacity: 0;
+        transform: translateY(10px) scale(0.98);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .anim-node {
+      opacity: 0;
+      animation: linktreeEnter 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Staggered micro-timings (all completing in a fraction of a second) */
+    .anim-d1 { animation-delay: 0.00s; }
+    .anim-d2 { animation-delay: 0.04s; }
+    .anim-d3 { animation-delay: 0.08s; }
+    .anim-d4 { animation-delay: 0.12s; }
+    .anim-d5 { animation-delay: 0.16s; }
+  </style>
+</head>
+
+<body class="bg-modular-cream text-modular-dark min-h-screen flex flex-col justify-between items-center px-4 py-12 relative overflow-x-hidden selection:bg-modular-dark selection:text-modular-cream">
+
+  <!-- Ambient Brand Glows (Matching your website styling) -->
+  <div class="fixed inset-0 pointer-events-none z-0">
+    <div class="absolute -top-16 -right-16 w-72 h-72 rounded-full bg-modular-blue/50 blur-3xl"></div>
+    <div class="absolute -bottom-16 -left-16 w-72 h-72 rounded-full bg-modular-dark/5 blur-3xl"></div>
+  </div>
+
+  <!-- Mobile-First Center Container -->
+  <main class="w-full max-w-sm flex flex-col items-center relative z-10 my-auto">
+    
+    <!-- Profile Avatar & Info -->
+    <div class="flex flex-col items-center text-center anim-node anim-d1 mb-8">
+      <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white shadow-md p-0.5 bg-white mb-4 transition-transform duration-300 hover:scale-105">
+        <img 
+          src="./img/about/about-1.jpg" 
+          onerror="this.onerror=null; this.src='https://placehold.co/200x200/102E20/FAF6F0?text=Joey';" 
+          alt="Joey van der Linden" 
+          class="w-full h-full object-cover rounded-full"
+        >
+      </div>
+      
+      <h1 class="font-display font-extrabold text-xl sm:text-2xl uppercase tracking-tight text-modular-dark">
+        @joeyvdl
+      </h1>
+      
+      <p class="font-sans text-xs sm:text-sm text-modular-muted font-medium mt-1 max-w-[260px] leading-relaxed">
+        Creative Producer &amp; Multimedia Designer based in The Netherlands.
+      </p>
+    </div>
+
+    <!-- Links Stack (Exact Linktree Button Layout with Left Spacer & Right ⋮ Icon) -->
+    <div class="w-full space-y-3.5">
+
+      <!-- 1. My Portfolio -->
+      <a 
+        href="https://joeyvanderlinden.nl/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="anim-node anim-d2 group w-full bg-modular-dark hover:bg-modular-darkHover active:scale-[0.98] text-white py-4 px-6 rounded-2xl flex items-center justify-between shadow-sm hover:shadow-md transition-all duration-200 border border-modular-dark"
+      >
+        <span class="w-4"></span>
+        <span class="font-display font-bold text-xs uppercase tracking-wider text-center flex-1">
+          My Portfolio
+        </span>
+        <i class="fa-solid fa-ellipsis-vertical text-white/50 text-xs w-4 text-right group-hover:text-white transition-colors"></i>
+      </a>
+
+      <!-- 2. Automotive Portfolio -->
+      <a 
+        href="https://silverymedia.nl/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="anim-node anim-d3 group w-full bg-modular-dark hover:bg-modular-darkHover active:scale-[0.98] text-white py-4 px-6 rounded-2xl flex items-center justify-between shadow-sm hover:shadow-md transition-all duration-200 border border-modular-dark"
+      >
+        <span class="w-4"></span>
+        <span class="font-display font-bold text-xs uppercase tracking-wider text-center flex-1">
+          Automotive Portfolio
+        </span>
+        <i class="fa-solid fa-ellipsis-vertical text-white/50 text-xs w-4 text-right group-hover:text-white transition-colors"></i>
+      </a>
+
+      <!-- 3. LinkedIn -->
+      <a 
+        href="https://www.linkedin.com/in/joeyvdl/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="anim-node anim-d4 group w-full bg-modular-dark hover:bg-modular-darkHover active:scale-[0.98] text-white py-4 px-6 rounded-2xl flex items-center justify-between shadow-sm hover:shadow-md transition-all duration-200 border border-modular-dark"
+      >
+        <span class="w-4"></span>
+        <span class="font-display font-bold text-xs uppercase tracking-wider text-center flex-1">
+          LinkedIn
+        </span>
+        <i class="fa-solid fa-ellipsis-vertical text-white/50 text-xs w-4 text-right group-hover:text-white transition-colors"></i>
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- Clean Signature Footer (In Linktree Style) -->
+  <footer class="mt-8 text-center anim-node anim-d5 relative z-10">
+    <span class="font-display font-bold text-[11px] tracking-widest text-modular-dark/60 uppercase">
+      Joey van der Linden
+    </span>
+  </footer>
+
+</body>
+
+</html>
